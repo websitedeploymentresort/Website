@@ -12,18 +12,18 @@ export default function AboutPage() {
   return (
     <>
       <Sidebar />
-      <PageHero
+      {/* <PageHero
         title="About La Damai"
         subtitle="Our Story"
         image="https://images.unsplash.com/photo-1582719201676-3a4b5b8a3a37?q=80&w=2000&auto=format&fit=crop"
-      />
+      /> */}
 
       {/* Story section */}
       <section className="bg-porcelain py-20 md:py-28">
         <div className="max-w-7xl mx-auto px-6 md:px-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="relative h-[400px] md:h-[520px] order-2 lg:order-1">
             <Image
-              src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?q=80&w=1600&auto=format&fit=crop"
+              src="/room_pics/IMG_9387.PNG"
               alt="La Damai Resort grounds"
               fill
               className="object-cover"
@@ -60,7 +60,7 @@ export default function AboutPage() {
       </section>
 
       {/* Values */}
-      <section className="bg-vanilla py-20 md:py-28">
+      <section className="bg-vanilla py-12 md:py-16">
         <div className="max-w-7xl mx-auto px-6 md:px-10">
           <div className="text-center mb-14">
             <p className="text-coffee/60 text-xs tracking-[0.4em] uppercase mb-4">

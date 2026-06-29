@@ -39,17 +39,22 @@ export default function ContactPage() {
 
             <div className="flex items-start gap-4">
               <MapPin size={22} strokeWidth={1.5} className="text-palm shrink-0 mt-1" />
-              <p className="text-sm text-porcelain/80 leading-relaxed">
-                Hunasemakki
-                <br />
-                Chikamagaluru
-              </p>
+              <a
+                  href="https://maps.app.goo.gl/AH27CMgGtsKM8Gzv6?g_st=ic"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-porcelain/80 leading-relaxed hover:text-palm transition-colors"
+                >
+                  Hunasemakki, Kallugudde Road,
+                  <br />
+                  Chikmagalur - 577133
+                </a>
             </div>
 
             <div className="flex items-start gap-4">
               <Phone size={22} strokeWidth={1.5} className="text-palm shrink-0 mt-1" />
               <p className="text-sm text-porcelain/80 leading-relaxed">
-                +91 89700 54295
+                +91 99000 64697
               </p>
             </div>
 
@@ -63,7 +68,7 @@ export default function ContactPage() {
             <div className="flex items-start gap-4">
               <Clock size={22} strokeWidth={1.5} className="text-palm shrink-0 mt-1" />
               <p className="text-sm text-porcelain/80 leading-relaxed">
-                Front Desk: 24 Hours
+                Front Desk: 11am-11pm Hours
               </p>
             </div>
           </div>

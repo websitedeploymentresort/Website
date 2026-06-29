@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { Menu, X, Instagram, Facebook, Twitter as TwitterIcon } from "lucide-react";
-
+import Image from "next/image";
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About Us" },
@@ -50,11 +50,26 @@ export default function Sidebar() {
         </button>
 
         <Link
-          href="/"
-          className="font-display text-vanilla text-xl md:text-2xl tracking-[0.3em] uppercase"
-        >
-          La Damai
-        </Link>
+  href="/"
+  className="flex items-center justify-center translate-x-4"
+> 
+  <Image
+    src="/logo/coffeebean.png"
+    alt="La Damai"
+    width={240}
+    height={60}
+    priority
+    className="h-10 md:h-12 w-auto object-contain"
+  />
+  <Image
+    src="/logo/navbar-Logo_Inverse_horizontal_copy_copy.JPG-removebg-preview.png"
+    alt="La Damai"
+    width={240}
+    height={60}
+    priority
+    className="h-10 md:h-12 w-auto object-contain"
+  />
+</Link>
 
         <Link
           href="/booking"

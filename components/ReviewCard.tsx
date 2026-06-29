@@ -20,12 +20,8 @@ export default function ReviewCard({ review }: { review: Review }) {
         ))}
       </div>
       <div className="flex items-center gap-3">
-        <div className="relative w-10 h-10 rounded-full overflow-hidden shrink-0">
-          <Image src={review.avatar} alt={review.name} fill className="object-cover" />
-        </div>
         <div>
           <p className="text-sm font-medium">{review.name}</p>
-          <p className="text-xs text-coffee/50">{review.location}</p>
         </div>
       </div>
     </div>

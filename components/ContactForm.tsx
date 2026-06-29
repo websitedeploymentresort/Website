@@ -25,7 +25,7 @@ export default function ContactForm() {
             type="text"
             required
             className="bg-transparent border border-coffee/20 px-4 py-3 text-sm focus:outline-none focus:border-palm transition-colors"
-            placeholder="Jane Doe"
+            // placeholder="Jane Doe"
           />
         </div>
         <div className="flex flex-col gap-2">
@@ -38,7 +38,7 @@ export default function ContactForm() {
             type="email"
             required
             className="bg-transparent border border-coffee/20 px-4 py-3 text-sm focus:outline-none focus:border-palm transition-colors"
-            placeholder="jane@example.com"
+            // placeholder="jane@example.com"
           />
         </div>
       </div>
@@ -52,7 +52,7 @@ export default function ContactForm() {
           name="phone"
           type="tel"
           className="bg-transparent border border-coffee/20 px-4 py-3 text-sm focus:outline-none focus:border-palm transition-colors"
-          placeholder="+1 (555) 000-0000"
+          // placeholder="+1 (555) 000-0000"
         />
       </div>
 

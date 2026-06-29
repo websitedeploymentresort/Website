@@ -1,6 +1,8 @@
 "use server";
 
-import { createClient } from "@/lib/supabase/server";
+import { Resend } from "resend";
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export type ActionResult = {
   success: boolean;
@@ -17,36 +19,42 @@ export async function submitContactForm(
   const message = formData.get("message") as string;
 
   if (!name || !email || !message) {
-    return { success: false, message: "Please fill in all required fields." };
+    return {
+      success: false,
+      message: "Please fill in all required fields.",
+    };
   }
 
   try {
-    const supabase = await createClient();
-    const { error } = await supabase.from("contact_messages").insert({
-      name,
-      email,
-      phone,
-      message,
-    });
+    await resend.emails.send({
+      from: "La Damai Resort <onboarding@resend.dev>", // Replace after domain verification
+      to: "reservations@damairesorts.com",      
+      subject: `New Contact Enquiry from ${name}`,
+      replyTo: email,
 
-    if (error) {
-      console.error("Supabase insert error:", error.message);
-      return {
-        success: false,
-        message:
-          "We couldn't send your message right now. Please try again later.",
-      };
-    }
+      html: `
+        <h2>New Contact Enquiry</h2>
+
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Phone:</strong> ${phone || "-"}</p>
+
+        <hr>
+
+        <p>${message.replace(/\n/g, "<br>")}</p>
+      `,
+    });
 
     return {
       success: true,
-      message: "Thank you for reaching out. Our team will be in touch soon.",
+      message: "Thank you for contacting us. We'll get back to you shortly.",
     };
   } catch (err) {
     console.error(err);
+
     return {
       success: false,
-      message: "Something went wrong. Please try again.",
+      message: "Unable to send your message. Please try again.",
     };
   }
 }
@@ -64,43 +72,53 @@ export async function submitBookingRequest(
   const guests = formData.get("guests") as string;
   const notes = formData.get("notes") as string;
 
-  if (!name || !email || !checkIn || !checkOut || !room) {
-    return { success: false, message: "Please fill in all required fields." };
+  if (!name || !email || !room || !checkIn || !checkOut) {
+    return {
+      success: false,
+      message: "Please fill in all required fields.",
+    };
   }
 
   try {
-    const supabase = await createClient();
-    const { error } = await supabase.from("bookings").insert({
-      name,
-      email,
-      phone,
-      room,
-      check_in: checkIn,
-      check_out: checkOut,
-      guests: guests ? Number(guests) : 1,
-      notes,
-      status: "pending",
-    });
+    await resend.emails.send({
+      from: "La Damai Resort <onboarding@resend.dev>", // Replace after domain verification
+      to: "reservations@damairesorts.com",
+      subject: `New Booking Request - ${room}`,
+      replyTo: email,
 
-    if (error) {
-      console.error("Supabase insert error:", error.message);
-      return {
-        success: false,
-        message:
-          "We couldn't submit your booking request right now. Please try again later.",
-      };
-    }
+      html: `
+        <h2>New Booking Request</h2>
+
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Phone:</strong> ${phone || "-"}</p>
+
+        <hr>
+
+        <p><strong>Room:</strong> ${room}</p>
+        <p><strong>Check In:</strong> ${checkIn}</p>
+        <p><strong>Check Out:</strong> ${checkOut}</p>
+        <p><strong>Guests:</strong> ${guests || 1}</p>
+
+        <hr>
+
+        <p><strong>Additional Notes</strong></p>
+
+        <p>${notes ? notes.replace(/\n/g, "<br>") : "None"}</p>
+      `,
+    });
 
     return {
       success: true,
       message:
-        "Your booking request has been received. Our reservations team will confirm availability shortly.",
+        "Your booking request has been received. Our reservations team will contact you shortly.",
     };
   } catch (err) {
     console.error(err);
+
     return {
       success: false,
-      message: "Something went wrong. Please try again.",
+      message: "Unable to submit your booking request.",
     };
   }
 }

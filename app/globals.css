@@ -2,10 +2,10 @@
 
 :root {
   --color-coffee: #261C15;
-  --color-walnut: #671D00;
-  --color-palm: #7F8F35;
-  --color-vanilla: #E2E6A9;
-  --color-porcelain: #F7F7F2;
+  --color-walnut: #5A4632;
+  --color-palm: #3F5E47;
+  --color-vanilla: #EDE6DA;
+  --color-porcelain: #F7F3EC;
 }
 
 @theme inline {

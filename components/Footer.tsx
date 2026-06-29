@@ -1,78 +1,135 @@
 import Link from "next/link";
-import { Instagram, Facebook, Twitter as TwitterIcon, MapPin, Phone, Mail } from "lucide-react";
+import {
+  Instagram,
+  Facebook,
+  Twitter as TwitterIcon,
+  MapPin,
+  Phone,
+  Mail,
+} from "lucide-react";
 
 export default function Footer() {
   return (
     <footer className="bg-coffee text-porcelain">
-      <div className="max-w-7xl mx-auto px-6 md:px-10 py-16 grid grid-cols-1 md:grid-cols-4 gap-12">
-        
+      <div className="max-w-6xl mx-auto px-6 md:px-10 py-14">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-20 items-start">
 
-        <div>
-          <h4 className="font-display text-lg text-vanilla mb-4">Explore</h4>
-          <ul className="space-y-2 text-sm text-porcelain/70">
-            <li><Link href="/about" className="hover:text-palm transition-colors">About Us</Link></li>
-            <li><Link href="/rooms" className="hover:text-palm transition-colors">Rooms &amp; Suites</Link></li>
-            <li><Link href="/gallery" className="hover:text-palm transition-colors">Gallery</Link></li>
-            <li><Link href="/booking" className="hover:text-palm transition-colors">Book Now</Link></li>
-          </ul>
-        </div>
+          {/* Explore */}
+          <div className="text-center md:text-left">
+            <h4 className="font-display text-2xl text-vanilla mb-6">
+              Explore
+            </h4>
 
-        <div>
-          <h4 className="font-display text-lg text-vanilla mb-4">Contact</h4>
-          <ul className="space-y-3 text-sm text-porcelain/70">
-            <li className="flex items-center gap-3">
-              <MapPin
-                size={18}
-                strokeWidth={1.5}
-                className="text-palm shrink-0 mt-0.5"
-              />
+            <ul className="space-y-3 text-base text-porcelain/70">
+              <li>
+                <Link
+                  href="/about"
+                  className="hover:text-palm transition-colors"
+                >
+                  About Us
+                </Link>
+              </li>
 
+              <li>
+                <Link
+                  href="/rooms"
+                  className="hover:text-palm transition-colors"
+                >
+                  Rooms &amp; Suites
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  href="/gallery"
+                  className="hover:text-palm transition-colors"
+                >
+                  Gallery
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  href="/booking"
+                  className="hover:text-palm transition-colors"
+                >
+                  Book Now
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Contact */}
+          <div className="text-center md:text-left">
+            <h4 className="font-display text-2xl text-vanilla mb-6">
+              Contact
+            </h4>
+
+            <ul className="space-y-5 text-base text-porcelain/70">
+              <li className="flex items-start justify-center md:justify-start gap-4">
+                <MapPin
+                  size={20}
+                  strokeWidth={1.5}
+                  className="text-palm mt-1 shrink-0"
+                />
+
+                <a
+                  href="https://maps.app.goo.gl/AH27CMgGtsKM8Gzv6?g_st=ic"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-palm transition-colors"
+                >
+                  Hunasemakki, Kallugudde Road,
+                  <br />
+                  Chikmagalur - 577133
+                </a>
+              </li>
+
+              <li className="flex items-center justify-center md:justify-start gap-4">
+                <Phone
+                  size={20}
+                  strokeWidth={1.5}
+                  className="text-palm shrink-0"
+                />
+                +91 99000 64697
+              </li>
+
+              <li className="flex items-center justify-center md:justify-start gap-4">
+                <Mail
+                  size={20}
+                  strokeWidth={1.5}
+                  className="text-palm shrink-0"
+                />
+                reservations@damairesorts.com
+              </li>
+            </ul>
+          </div>
+
+          {/* Follow Us */}
+          <div className="text-center md:text-right">
+            <h4 className="font-display text-2xl text-vanilla mb-6">
+              Follow Us
+            </h4>
+
+            <div className="flex justify-center md:justify-end gap-8">
               <a
-                href="https://maps.app.goo.gl/AH27CMgGtsKM8Gzv6?g_st=ic"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-palm transition-colors duration-300"
+                href="https://www.instagram.com/ladamai.chikmagalur/"
+                className="text-vanilla hover:text-palm transition-colors"
               >
-                Hunasemakki, Chikmagalur - maps.app.goo.gl
+                <Instagram size={30} strokeWidth={1.5} />
               </a>
-            </li>
-            <li className="flex items-center gap-3">
-              <Phone size={18} strokeWidth={1.5} className="text-palm shrink-0" />
-              +1 (555) 234-9871
-            </li>
-            <li className="flex items-center gap-3">
-              <Mail size={18} strokeWidth={1.5} className="text-palm shrink-0" />
-              reservations@damairesorts.com
-            </li>
-          </ul>
-        </div>
+            </div>
+          </div>
 
-        <div>
-          
-          <div className="flex flex-col gap-6 mt-6">
-            <Instagram
-              size={24}
-              strokeWidth={1.5}
-              className="text-vanilla hover:text-palm transition-colors cursor-pointer"
-            />
-
-            <Facebook
-              size={24}
-              strokeWidth={1.5}
-              className="text-vanilla hover:text-palm transition-colors cursor-pointer"
-            />
-
-            <TwitterIcon
-              size={24}
-              strokeWidth={1.5}
-              className="text-vanilla hover:text-palm transition-colors cursor-pointer"
-            />
-</div>
         </div>
       </div>
-      <div className="border-t border-porcelain/10 py-6 text-center text-xs text-porcelain/40 tracking-wider">
-        © {new Date().getFullYear()} La Damai Resort. All rights reserved.
+
+      <div className="border-t border-porcelain/10 py-5">
+        <p className="text-center text-xs tracking-[0.25em] uppercase text-porcelain/40">
+          © {new Date().getFullYear()} La Damai Resort. All Rights Reserved.
+        </p>
       </div>
     </footer>
   );
 }
+

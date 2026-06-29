@@ -17,13 +17,13 @@ export default function GalleryPage() {
 
       <PageHero
         title="Gallery"
-        subtitle="Moments At La Damai"
+        subtitle="A Glimpse Of Paradise"
         image="/room_pics/opening_image.PNG"
       />
 
-      <section className="bg-porcelain py-20 md:py-28">
+      <section className="bg-porcelain py-1 md:py-6">
         <div className="max-w-7xl mx-auto px-6 md:px-10">
-          <div className="text-center mb-14 max-w-2xl mx-auto">
+          {/* <div className="text-center mb-14 max-w-2xl mx-auto">
             <p className="text-palm text-xs tracking-[0.4em] uppercase mb-4">
               Visual Journey
             </p>
@@ -31,7 +31,7 @@ export default function GalleryPage() {
             <h2 className="font-display text-3xl md:text-5xl text-coffee">
               A Glimpse Of Paradise
             </h2>
-          </div>
+          </div> */}
 
           <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4">
             {galleryImages.map((img, i) => (

@@ -1,3 +1,8 @@
+type RoomFeature = {
+  icon: string;
+  text: string;
+};
+
 export type Room = {
   id: string;
   name: string;
@@ -6,6 +11,9 @@ export type Room = {
   size: string;
   occupancy: string;
   image: string;
+  mealPlan: string;
+  highlights: RoomFeature[];
+  amenities: RoomFeature[];
 };
 
 export const rooms: Room[] = [
@@ -13,12 +21,34 @@ export const rooms: Room[] = [
     id: "barbet-couple-suite",
     name: "Barbet Couple Suite",
     description:
-      "Designed for couples seeking privacy and comfort, the Barbet Couple Suite features a private jacuzzi, scenic balcony, walk-in wardrobe, and thoughtfully curated interiors overlooking the serene landscapes of Chikmagalur.",
+      "For couples seeking privacy and comfort, featuring a private jacuzzi, scenic balcony, walk-in wardrobe, and thoughtfully curated interiors overlooking serene landscapes.",
     price: 12999,
     size: "Premium Suite",
     occupancy: "2 Adults",
-    image: "/room_pics/barbet-couple-suite/IMG_9172.PNG",
-  },
+    image: "/room_pics/barbet-couple-suite/IMG_9172-cropped.PNG",
+
+    mealPlan: "Complimentary Breakfast",
+
+    highlights: [
+  { icon: "bath", text: "Private Jacuzzi" },
+  { icon: "mountain", text: "Scenic Balcony" },
+  { icon: "shirt", text: "Walk-in Wardrobe" },
+  { icon: "sparkles", text: "Premium Couple Layout" },
+],
+
+amenities: [
+  { icon: "bed", text: "King Size Bed" },
+  { icon: "droplets", text: "24×7 Hot Water" },
+  { icon: "snowflake", text: "Air Conditioning" },
+  { icon: "wifi", text: "Complimentary Wi-Fi" },
+  { icon: "coffee", text: "Tea / Coffee Maker" },
+  { icon: "badge", text: "Luxury Toiletries" },
+  { icon: "bath", text: "Bath Robe" },
+  { icon: "waves", text: "Swimming Pool Access" },
+  { icon: "gamepad", text: "Indoor Games" },
+  { icon: "bird", text: "Bird Watching Experience" },
+],},
+
   {
     id: "robin-estate-suite",
     name: "Robin Luxury Estate Suite",
@@ -27,8 +57,30 @@ export const rooms: Room[] = [
     price: 14999,
     size: "Luxury Estate Suite",
     occupancy: "2 Adults",
-    image: "/room_pics/robin-estate-suite/IMG_9178.PNG",
+    image: "/room_pics/robin-estate-suite/IMG_9178-cropped.PNG",
+
+    mealPlan: "Complimentary Breakfast",
+highlights: [
+  { icon: "bath", text: "Private Jacuzzi" },
+  { icon: "shower", text: "Open Style Luxury Bathroom" },
+  { icon: "trees", text: "Private Backyard" },
+  { icon: "shirt", text: "Walk-in Wardrobe" },
+],
+
+    amenities: [
+  { icon: "bed", text: "King Size Bed" },
+  { icon: "droplets", text: "24×7 Hot Water" },
+  { icon: "snowflake", text: "Air Conditioning" },
+  { icon: "wifi", text: "Complimentary Wi-Fi" },
+  { icon: "coffee", text: "Tea / Coffee Maker" },
+  { icon: "badge", text: "Luxury Toiletries" },
+  { icon: "bath", text: "Bath Robe" },
+  { icon: "waves", text: "Swimming Pool Access" },
+  { icon: "gamepad", text: "Indoor Games" },
+  { icon: "bird", text: "Bird Watching Experience" },
+],
   },
+
   {
     id: "canary-couple-suite",
     name: "Canary Couple Suite",
@@ -37,8 +89,30 @@ export const rooms: Room[] = [
     price: 11999,
     size: "Couple Suite",
     occupancy: "2 Adults",
-    image: "/room_pics/canary-couple-suite/IMG_9172.PNG",
+    image: "/room_pics/canary-couple-suite/IMG_9174.PNG",
+
+    mealPlan: "Complimentary Breakfast",
+
+    highlights: [
+  { icon: "bath", text: "Luxury Bathtub" },
+  { icon: "trees", text: "Private Backyard" },
+  { icon: "sparkles", text: "Premium Couple Layout" },
+],
+
+    amenities: [
+  { icon: "bed", text: "King Size Bed" },
+  { icon: "droplets", text: "24×7 Hot Water" },
+  { icon: "snowflake", text: "Air Conditioning" },
+  { icon: "wifi", text: "Complimentary Wi-Fi" },
+  { icon: "coffee", text: "Tea / Coffee Maker" },
+  { icon: "badge", text: "Luxury Toiletries" },
+  { icon: "bath", text: "Bath Robe" },
+  { icon: "waves", text: "Swimming Pool Access" },
+  { icon: "gamepad", text: "Indoor Games" },
+  { icon: "bird", text: "Bird Watching Experience" },
+],
   },
+
   {
     id: "hornbill-estate-view",
     name: "Hornbill Cottage",
@@ -48,7 +122,29 @@ export const rooms: Room[] = [
     size: "Family Cottage",
     occupancy: "4 Adults",
     image: "/room_pics/hornbill-estate-view/IMG_9362.PNG",
+
+    mealPlan: "Complimentary Breakfast",
+
+    highlights: [
+  { icon: "mountain", text: "Estate View" },
+  { icon: "trees", text: "Private Backyard" },
+  { icon: "home", text: "Spacious Family Cottage" },
+],
+
+    amenities: [
+  { icon: "bed", text: "King Size Bed" },
+  { icon: "droplets", text: "24×7 Hot Water" },
+  { icon: "snowflake", text: "Air Conditioning" },
+  { icon: "wifi", text: "Complimentary Wi-Fi" },
+  { icon: "coffee", text: "Tea / Coffee Maker" },
+  { icon: "badge", text: "Luxury Toiletries" },
+  { icon: "bath", text: "Bath Robe" },
+  { icon: "waves", text: "Swimming Pool Access" },
+  { icon: "gamepad", text: "Indoor Games" },
+  { icon: "bird", text: "Bird Watching Experience" },
+],
   },
+
   {
     id: "silverbill-pool-view",
     name: "Silverbill Cottage",
@@ -58,49 +154,61 @@ export const rooms: Room[] = [
     size: "Family Cottage",
     occupancy: "4 Adults",
     image: "/room_pics/silverbill-pool-view/IMG_9362.PNG",
+
+    mealPlan: "Complimentary Breakfast",
+
+    highlights: [
+  { icon: "waves", text: "Pool View" },
+  { icon: "trees", text: "Private Backyard" },
+  { icon: "home", text: "Family Cottage" },
+],
+
+    amenities: [
+  { icon: "bed", text: "King Size Bed" },
+  { icon: "droplets", text: "24×7 Hot Water" },
+  { icon: "snowflake", text: "Air Conditioning" },
+  { icon: "wifi", text: "Complimentary Wi-Fi" },
+  { icon: "coffee", text: "Tea / Coffee Maker" },
+  { icon: "badge", text: "Luxury Toiletries" },
+  { icon: "bath", text: "Bath Robe" },
+  { icon: "waves", text: "Swimming Pool Access" },
+  { icon: "gamepad", text: "Indoor Games" },
+  { icon: "bird", text: "Bird Watching Experience" },
+],
   },
 ];
 export type Review = {
   id: string;
-  name: string;
-  location: string;
+  name: string;  
   rating: number;
   text: string;
-  avatar: string;
+  
 };
 
 export const reviews: Review[] = [
   {
     id: "r1",
-    name: "Eleanor Whitfield",
-    location: "London, UK",
+    name: "Benedict Solomon",
     rating: 5,
-    text: "An extraordinary escape from start to finish. The staff anticipated our every need, and the villa itself felt like a private world of its own.",
-    avatar: "https://i.pravatar.cc/100?img=47",
+    text: "Had a great weekend at damai, It was really amazing being here. 10/10 for their hospitality and service. Highly recommended if you’re dropping by. Serene views, great food."
   },
   {
     id: "r2",
-    name: "James Carter",
-    location: "New York, USA",
+    name: "Ruchi Gahlot",
     rating: 5,
-    text: "La Damai redefined what we thought a resort could be. Quiet luxury, impeccable service, and views that genuinely took our breath away.",
-    avatar: "https://i.pravatar.cc/100?img=12",
+    text: "The stay is beautiful, good escape to the city life. Definitely would like to come back again and enjoy the peace and serene surrounding."
   },
   {
     id: "r3",
-    name: "Sofia Marchetti",
-    location: "Milan, Italy",
-    rating: 4,
-    text: "Every detail felt considered — from the welcome ritual to the turndown service. We are already planning our return for next spring.",
-    avatar: "https://i.pravatar.cc/100?img=32",
+    name: "Anshika Garg",
+    rating: 5,
+    text: "11/10 stay at La Damai! A serene and beautiful experience with amazing food and peaceful vibes. The place feels calm and chaotic in its own unique way! A special mention to the owner Madan, whose warmth and hospitality made the stay even more memorable. All and all the stay was worth!"
   },
   {
     id: "r4",
-    name: "Daniel Osei",
-    location: "Cape Town, South Africa",
+    name: "Vrunda Kalyankar",
     rating: 5,
-    text: "The Rainforest Canopy Loft was unlike anything we've experienced — total serenity, paired with effortless five-star comfort.",
-    avatar: "https://i.pravatar.cc/100?img=51",
+    text: "Excellent experience. The rooms are wonderfully done with exceptional taste. Each rooms offers a different experience and the food is delicious. It’s away from city so you’ll be getting the perfect serene experience. Place is a must visit will be sure to come back again :)"
   },
 ];
 

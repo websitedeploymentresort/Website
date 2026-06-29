@@ -5,8 +5,11 @@ import { Maximize, Users, ArrowRight } from "lucide-react";
 
 export default function RoomCard({ room }: { room: Room }) {
   return (
-    <div className="group bg-porcelain border border-coffee/70 overflow-hidden transition-all duration-500 hover:shadow-xl hover:shadow-coffee/10">
-      <div className="relative h-64 overflow-hidden">
+    <Link
+  href={`/rooms/${room.id}`}
+  className="group block h-[560px] bg-porcelain border border-coffee/70 overflow-hidden flex flex-col transition-all duration-500 hover:shadow-xl hover:shadow-coffee/10"
+>
+  <div className="relative h-[340px] overflow-hidden flex-shrink-0">
         <Image
           src={room.image}
           alt={room.name}
@@ -18,7 +21,7 @@ export default function RoomCard({ room }: { room: Room }) {
         </div>
       </div>
 
-      <div className="p-6 md:p-8">
+      <div className="p-4 md:p-4">
         <h3 className="font-display text-2xl mb-3">{room.name}</h3>
         <p className="text-sm text-coffee/70 leading-relaxed mb-5">
           {room.description}
@@ -36,13 +39,13 @@ export default function RoomCard({ room }: { room: Room }) {
         </div>
 
         <Link
-          href={`/booking?room=${room.id}`}
+          href={`/rooms/${room.id}`}
           className="inline-flex items-center gap-2 text-sm uppercase tracking-[0.2em] text-coffee border-b border-coffee/30 pb-1 hover:border-palm hover:text-palm transition-colors duration-300"
         >
           Reserve
           <ArrowRight size={16} strokeWidth={1.5} className="transition-transform duration-300 group-hover:translate-x-1" />
         </Link>
       </div>
-    </div>
+    </Link>
   );
 }
