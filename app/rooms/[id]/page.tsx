@@ -189,49 +189,15 @@ const iconMap = {
   badge: BadgeCheck,
   droplets: Droplets,
   shower: ShowerHead,
-};
+} as const;
+
+type IconName = keyof typeof iconMap;
 import Sidebar from "@/components/Sidebar";
 import Footer from "@/components/Footer";
 
 import { rooms } from "@/lib/data";
 import { getRoomImages } from "@/lib/roomImages";
 
-
-function highlightIcon(item: string) {
-  const text = item.toLowerCase();
-
-  if (text.includes("jacuzzi"))
-    return <Bath size={18} className="text-palm shrink-0" />;
-
-  if (text.includes("bathtub"))
-    return <Bath size={18} className="text-palm shrink-0" />;
-
-  if (text.includes("bathroom"))
-    return <ShowerHead size={18} className="text-palm shrink-0" />;
-
-  if (text.includes("balcony"))
-    return <Mountain size={18} className="text-palm shrink-0" />;
-
-  if (text.includes("backyard"))
-    return <Trees size={18} className="text-palm shrink-0" />;
-
-  if (text.includes("estate"))
-    return <Mountain size={18} className="text-palm shrink-0" />;
-
-  if (text.includes("pool"))
-    return <Waves size={18} className="text-palm shrink-0" />;
-
-  if (text.includes("wardrobe"))
-    return <Home size={18} className="text-palm shrink-0" />;
-
-  if (text.includes("family"))
-    return <Home size={18} className="text-palm shrink-0" />;
-
-  if (text.includes("premium"))
-    return <Sparkles size={18} className="text-palm shrink-0" />;
-
-  return <Sparkles size={18} className="text-palm shrink-0" />;
-}
 
 export default async function RoomDetails({
   params,
@@ -296,7 +262,7 @@ const allImages = [room.image, ...images];
                 <div className="grid sm:grid-cols-2 gap-x-10 gap-y-5">
 
                   {room.highlights.map((item) => {
-              const Icon = iconMap[item.icon];
+              const Icon = iconMap[item.icon as keyof typeof iconMap];
 
               return (
                 <div
@@ -333,7 +299,7 @@ const allImages = [room.image, ...images];
                 <div className="grid sm:grid-cols-2 gap-x-10 gap-y-5">
 
                   {room.amenities.map((item) => {
-              const Icon = iconMap[item.icon];
+              const Icon = iconMap[item.icon as keyof typeof iconMap];
 
               return (
                 <div
