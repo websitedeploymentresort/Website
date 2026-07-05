@@ -6,7 +6,6 @@ import Sidebar from "@/components/Sidebar";
 import Footer from "@/components/Footer";
 import PageHero from "@/components/PageHero";
 
-// Automatically load every image in /public/food
 const foodDir = path.join(process.cwd(), "public", "food");
 
 const foodImages = fs
@@ -15,8 +14,25 @@ const foodImages = fs
   .sort()
   .map((file) => `/food/${file}`);
 
-// Use the first image as the hero image
 const heroImage = foodImages[0];
+const galleryImages = foodImages.slice(1);
+
+const badges = [
+  { icon: "🍳", label: "Complimentary Breakfast" },
+  { icon: "🥐", label: "Continental Selection" },
+  { icon: "🍽️", label: "Multi-Cuisine Restaurant" },
+  { icon: "🌿", label: "Nature-View Dining" },
+];
+
+const menuItems = [
+  "Freshly prepared meals throughout the day",
+  "South Indian specialties",
+  "North Indian favourites",
+  "Chinese cuisine",
+  "Vegetarian and non-vegetarian options",
+  "Family-friendly dining atmosphere",
+  "Scenic views overlooking nature",
+];
 
 export const metadata = {
   title: "Dining | La Damai Resort",
@@ -33,80 +49,102 @@ export default function DiningPage() {
         image={heroImage}
       />
 
-      <section className="bg-porcelain py-20 md:py-24">
-        <div className="max-w-7xl mx-auto px-6 md:px-10">
+      {/* Main content */}
+      <section className="bg-[#F7F4EE] py-24">
+        <div className="max-w-5xl mx-auto px-8">
 
-          <div className="max-w-4xl mb-16">
-            <p className="text-palm text-xs tracking-[0.4em] uppercase mb-4">
-              Restaurant
-            </p>
+          {/* Eyebrow + title */}
+          <span className="text-xs tracking-[0.3em] uppercase text-[#8B6F47] block mb-5">
+            Restaurant
+          </span>
+          <h2 className="font-display text-5xl md:text-6xl text-[#1A1612] leading-[1.05] mb-4">
+            Dining at La Damai
+          </h2>
+          <p className="text-[#8B6F47] text-lg font-light tracking-wide mb-8">
+            A Multi-Cuisine Culinary Experience
+          </p>
+          <div className="w-10 h-px bg-[#8B6F47] mb-10" />
 
-            <h2 className="font-display text-3xl md:text-5xl text-coffee mb-8">
-              Dining at La Damai
-            </h2>
-
-            {/* Highlight Badges */}
-            <div className="flex flex-wrap gap-3 mb-10">
-              {[
-                "🍳 Complimentary Breakfast",
-                "🥐 Continental Selection",
-                "🍽️ Multi-Cuisine Restaurant",
-                "🌿 Nature-View Dining",
-              ].map((badge) => (
-                <span
-                  key={badge}
-                  className="px-5 py-2 border border-palm/20 bg-palm/5 text-palm rounded-full text-sm"
-                >
-                  {badge}
-                </span>
-              ))}
-            </div>
-
-            <p className="text-coffee/70 leading-relaxed mb-8 text-lg">
-              Every meal at <strong>La Damai</strong> is designed to be a
-              memorable part of your stay. Begin your mornings with a generous
-              breakfast spread featuring South Indian classics alongside
-              continental selections. Throughout the day, enjoy a variety of
-              North Indian, South Indian, and Chinese dishes, freshly prepared
-              and served in a relaxed setting surrounded by nature. Our
-              restaurant offers a thoughtfully curated menu designed to satisfy
-              every palate.
-            </p>
-
-            <ul className="grid md:grid-cols-2 gap-y-4 gap-x-12 text-coffee/80">
-              <li>• Freshly prepared meals throughout the day</li>
-              <li>• South Indian specialties</li>
-              <li>• North Indian favourites</li>
-              <li>• Chinese cuisine</li>
-              <li>• Vegetarian and non-vegetarian options</li>
-              <li>• Family-friendly dining atmosphere</li>
-              <li>• Scenic views overlooking nature</li>
-            </ul>
-          </div>
-
-          {/* Food Gallery */}
-          <div className="columns-1 sm:columns-2 lg:columns-3 gap-5 space-y-5">
-            {foodImages.map((img, index) => (
-              <div
-                key={img}
-                className="relative overflow-hidden break-inside-avoid rounded-lg group"
-                style={{
-                  aspectRatio: index % 3 === 0 ? "4/5" : "4/3",
-                }}
+          {/* Badges */}
+          <div className="flex flex-wrap gap-3 mb-12">
+            {badges.map(({ icon, label }) => (
+              <span
+                key={label}
+                className="inline-flex items-center gap-2 px-5 py-2.5 border border-[#8B6F47]/25 bg-white text-[#3D3530] text-sm rounded-full"
               >
-                <Image
-                  src={img}
-                  alt={`Food ${index + 1}`}
-                  fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-
-                <div className="absolute inset-0 bg-coffee/0 group-hover:bg-coffee/15 transition-colors duration-500" />
-              </div>
+                <span>{icon}</span>
+                {label}
+              </span>
             ))}
           </div>
 
+          {/* Description + menu — two columns */}
+          <div className="grid md:grid-cols-[3fr_2fr] gap-14 items-start">
+
+            {/* Left: full description */}
+            <div>
+              <p className="text-[#3D3530] text-base leading-[1.85] mb-0">
+                Every meal at <strong className="font-semibold text-[#1A1612]">La Damai</strong> is
+                designed to be a memorable part of your stay. Begin your mornings
+                with a generous breakfast spread featuring South Indian classics
+                alongside continental selections. Throughout the day, enjoy a
+                variety of North Indian, South Indian, and Chinese dishes, freshly
+                prepared and served in a relaxed setting surrounded by nature. Our
+                restaurant offers a thoughtfully curated menu designed to satisfy
+                every palate.
+              </p>
+            </div>
+
+            {/* Right: menu list */}
+            <div className="bg-white border border-[#DDD8CE] px-8 py-8">
+              <span className="text-xs tracking-[0.25em] uppercase text-[#8B6F47] block mb-6">
+                On the Menu
+              </span>
+              <ul className="space-y-4">
+                {menuItems.map((item) => (
+                  <li
+                    key={item}
+                    className="flex items-start gap-3 text-sm text-[#3D3530] leading-relaxed"
+                  >
+                    <span className="mt-[7px] w-1 h-1 rounded-full bg-[#8B6F47] shrink-0" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+          </div>
         </div>
+      </section>
+
+      {/* Gallery */}
+      <section className="bg-[#1A1612] py-3 px-3">
+        <div className="columns-1 sm:columns-2 lg:columns-3 gap-3 space-y-3">
+          {galleryImages.map((img, i) => (
+            <div
+              key={img}
+              className="relative overflow-hidden break-inside-avoid group"
+              style={{
+                aspectRatio: i % 5 === 0 ? "3/4" : i % 3 === 0 ? "4/3" : "1/1",
+              }}
+            >
+              <Image
+                src={img}
+                alt={`Dining at La Damai — ${i + 1}`}
+                fill
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-500" />
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Closing */}
+      <section className="bg-[#F7F4EE] py-16 text-center">
+        <span className="text-xs tracking-[0.3em] uppercase text-[#8B6F47]">
+          Complimentary breakfast included with every room
+        </span>
       </section>
 
       <Footer />
