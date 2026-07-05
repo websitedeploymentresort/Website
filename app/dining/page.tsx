@@ -1,16 +1,22 @@
+import fs from "fs";
+import path from "path";
 import Image from "next/image";
+
 import Sidebar from "@/components/Sidebar";
 import Footer from "@/components/Footer";
 import PageHero from "@/components/PageHero";
 
-const foodImages = [
-  "/food/food1.jpg",
-  "/food/food2.jpg",
-  "/food/food3.jpg",
-  "/food/food4.jpg",
-  "/food/food5.jpg",
-  "/food/food6.jpg",
-];
+// Automatically load every image in /public/food
+const foodDir = path.join(process.cwd(), "public", "food");
+
+const foodImages = fs
+  .readdirSync(foodDir)
+  .filter((file) => /\.(png|jpg|jpeg|webp|avif)$/i.test(file))
+  .sort()
+  .map((file) => `/food/${file}`);
+
+// Use the first image as the hero image
+const heroImage = foodImages[0];
 
 export const metadata = {
   title: "Dining | La Damai Resort",
@@ -24,7 +30,7 @@ export default function DiningPage() {
       <PageHero
         title="Dining"
         subtitle="A Multi-Cuisine Culinary Experience"
-        image="/food/hero.jpg"
+        image={heroImage}
       />
 
       <section className="bg-porcelain py-20 md:py-24">
@@ -57,13 +63,14 @@ export default function DiningPage() {
             </div>
 
             <p className="text-coffee/70 leading-relaxed mb-8 text-lg">
-              Every meal at <strong>La Damai</strong> is designed to be a memorable
-              part of your stay. Begin your mornings with a generous breakfast
-              spread featuring South Indian classics alongside continental
-              selections. Throughout the day, enjoy a variety of North Indian,
-              South Indian, and Chinese dishes, freshly prepared and served in a
-              relaxed setting surrounded by nature. Our restaurant offers a
-              thoughtfully curated menu designed to satisfy every palate.
+              Every meal at <strong>La Damai</strong> is designed to be a
+              memorable part of your stay. Begin your mornings with a generous
+              breakfast spread featuring South Indian classics alongside
+              continental selections. Throughout the day, enjoy a variety of
+              North Indian, South Indian, and Chinese dishes, freshly prepared
+              and served in a relaxed setting surrounded by nature. Our
+              restaurant offers a thoughtfully curated menu designed to satisfy
+              every palate.
             </p>
 
             <ul className="grid md:grid-cols-2 gap-y-4 gap-x-12 text-coffee/80">
@@ -81,7 +88,7 @@ export default function DiningPage() {
           <div className="columns-1 sm:columns-2 lg:columns-3 gap-5 space-y-5">
             {foodImages.map((img, index) => (
               <div
-                key={index}
+                key={img}
                 className="relative overflow-hidden break-inside-avoid rounded-lg group"
                 style={{
                   aspectRatio: index % 3 === 0 ? "4/5" : "4/3",

@@ -216,7 +216,7 @@ const nextRoom = rooms[(currentIndex + 1) % rooms.length];
 
 const images = getRoomImages(id);
 
-const allImages = [room.image, ...images];
+
   return (
     <>
       <Sidebar />
@@ -356,7 +356,7 @@ const allImages = [room.image, ...images];
 
   <div className="grid grid-cols-2 gap-3">
 
-    {allImages.map((img, index) => (
+    {images.map((img, index) => (
 
       <div
         key={index}

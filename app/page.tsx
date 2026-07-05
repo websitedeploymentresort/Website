@@ -245,9 +245,17 @@ export default function HomePage() {
 
       <div className="absolute inset-0 flex items-center justify-center">
         <div className="border border-vanilla bg-black/20 backdrop-blur-sm px-8 py-4 text-center transition-all duration-300 group-hover:bg-black/35">
-          <h3 className="font-display text-2xl text-vanilla">
-            {item.title}
-          </h3>
+          <div className="text-center">
+            <h3 className="font-display text-2xl text-vanilla">
+              {item.title}
+            </h3>
+
+            {item.title === "Dining" && (
+              <p className="mt-2 text-xs tracking-[0.25em] uppercase text-vanilla/80 group-hover:text-vanilla transition-colors duration-300">
+                Click Here →
+              </p>
+            )}
+          </div>
         </div>
       </div>
     </div>

@@ -38,13 +38,14 @@ export default function RoomCard({ room }: { room: Room }) {
           </span>
         </div>
 
-        <Link
-          href={`/rooms/${room.id}`}
-          className="inline-flex items-center gap-2 text-sm uppercase tracking-[0.2em] text-coffee border-b border-coffee/30 pb-1 hover:border-palm hover:text-palm transition-colors duration-300"
-        >
+        <div className="inline-flex items-center gap-2 text-sm uppercase tracking-[0.2em] text-coffee border-b border-coffee/30 pb-1 group-hover:border-palm group-hover:text-palm transition-colors duration-300">
           Reserve
-          <ArrowRight size={16} strokeWidth={1.5} className="transition-transform duration-300 group-hover:translate-x-1" />
-        </Link>
+          <ArrowRight
+            size={16}
+            strokeWidth={1.5}
+            className="transition-transform duration-300 group-hover:translate-x-1"
+          />
+        </div>
       </div>
     </Link>
   );
