@@ -39,21 +39,21 @@ export default function AboutPage() {
               Born From A Love Of Untouched Places
             </h2>
             <p className="text-coffee/70 leading-relaxed text-sm md:text-base mb-5">
-              La Damai began as a quiet promise — to create a retreat that felt
-              less like a hotel and more like a private estate, where every
-              guest could reconnect with nature without sacrificing an ounce
-              of comfort.
+              Nestled amidst the lush coffee estates of Chikmagalur, La Damai was created
+              as a peaceful escape where guests can slow down, reconnect with nature, and
+              experience the warmth of genuine hospitality in an intimate setting.
             </p>
+
             <p className="text-coffee/70 leading-relaxed text-sm md:text-base mb-5">
-              Over the years, our family of villas, suites and residences has
-              grown, but our philosophy remains the same: thoughtful design,
-              genuine hospitality, and an unwavering respect for the land we
-              call home.
+              Every villa has been carefully designed to blend contemporary comfort with
+              the surrounding landscape, offering elegant interiors, modern amenities, and
+              uninterrupted views that celebrate the beauty of the Western Ghats.
             </p>
+
             <p className="text-coffee/70 leading-relaxed text-sm md:text-base">
-              Today, La Damai welcomes travellers from around the world seeking
-              a rare kind of stillness — one found only where the forest meets
-              the sea.
+              With just five exclusive villas, La Damai offers a level of privacy and
+              personalized service that larger resorts cannot match, ensuring every stay
+              feels relaxed, exclusive, and truly memorable.
             </p>
           </div>
         </div>
@@ -80,8 +80,7 @@ export default function AboutPage() {
                 Sustainability
               </h3>
               <p className="text-sm text-coffee/70 leading-relaxed max-w-xs">
-                From solar power to reef-safe practices, every initiative is
-                designed to protect the ecosystem that surrounds us.
+                From eco-friendly amenities to thoughtfully chosen materials, over 80% of the products used throughout La Damai are biodegradable, reflecting our commitment to responsible hospitality.
               </p>
             </div>
             <div className="flex flex-col items-center">

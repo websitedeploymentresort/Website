@@ -44,6 +44,44 @@ export async function submitContactForm(
         <p>${message.replace(/\n/g, "<br>")}</p>
       `,
     });
+    await resend.emails.send({
+  from: "La Damai Resort <onboarding@resend.dev>",
+  to: email,
+  subject: "We've received your enquiry | La Damai Resort",
+
+  html: `
+    <div style="font-family: Arial, sans-serif; max-width: 600px; margin: auto; line-height: 1.6;">
+      <h2>Thank you for contacting La Damai Resort!</h2>
+
+      <p>Dear ${name},</p>
+
+      <p>
+        Thank you for reaching out to us. We have successfully received your enquiry,
+        and a member of our team will get back to you as soon as possible.
+      </p>
+
+      <p><strong>Your Message:</strong></p>
+
+      <div style="background:#f7f7f7;padding:16px;border-radius:6px;">
+        ${message.replace(/\n/g, "<br>")}
+      </div>
+
+      <br>
+
+      <p>
+        We appreciate your interest in La Damai Resort and look forward to welcoming you.
+      </p>
+
+      <hr>
+
+      <p>
+        Regards,<br>
+        <strong>Reservations Team</strong><br>
+        La Damai Resort
+      </p>
+    </div>
+  `,
+});
 
     return {
       success: true,

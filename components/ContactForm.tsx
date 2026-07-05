@@ -45,12 +45,13 @@ export default function ContactForm() {
 
       <div className="flex flex-col gap-2">
         <label htmlFor="phone" className="text-xs uppercase tracking-[0.2em] text-coffee/60">
-          Phone Number
+          Phone Number *
         </label>
         <input
           id="phone"
           name="phone"
           type="tel"
+          required 
           className="bg-transparent border border-coffee/20 px-4 py-3 text-sm focus:outline-none focus:border-palm transition-colors"
           // placeholder="+1 (555) 000-0000"
         />

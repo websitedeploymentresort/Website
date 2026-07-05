@@ -188,16 +188,28 @@ export type Review = {
 export const reviews: Review[] = [
   {
     id: "r1",
-    name: "Benedict Solomon",
+    name: "User",
     rating: 5,
-    text: "Had a great weekend at damai, It was really amazing being here. 10/10 for their hospitality and service. Highly recommended if you’re dropping by. Serene views, great food."
-  },
+    text: `A true Trouvaille.
+
+           In my professional world, Trouvaille is a travel program we run for our business partners. In French, it means "a lucky find."
+             
+           Over the years, I've associated it with destinations and experiences. But on an impromptu family trip, I truly understood its meaning.
+             
+           We discovered La Damai in Chikmagalur — nestled amidst nature, filled with birdsong, fresh air, and the kind of warmth that comes from people who genuinely care. The way the team looked after my parents made it even more special.
+             
+           Each of us in the family found our own way to unwind, connect, and create memories....
+             
+           Some places are planned. Some are discovered.
+             
+           This one was a true Trouvaille... a lucky find that we will cherish for a long time. ❤️
+             
+           #trouvaille`,  },
   {
     id: "r2",
     name: "Ruchi Gahlot",
     rating: 5,
-    text: "The stay is beautiful, good escape to the city life. Definitely would like to come back again and enjoy the peace and serene surrounding."
-  },
+    text: "The stay is beautiful, good escape to the city life. Definitely would like to come back again and enjoy the peace and serene surrounding."  },
   {
     id: "r3",
     name: "Anshika Garg",

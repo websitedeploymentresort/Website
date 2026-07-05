@@ -212,52 +212,57 @@ export default function HomePage() {
   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5">
 
     {[
-      {
-        image: "/front_page/image1.PNG",
-        title: "Stargazing",
-      },
-      {
-        image: "/front_page/image2.PNG",
-        title: "Bird Watching",
-      },
-      {
-        image: "/front_page/image3.PNG",
-        title: "Estate Walks",
-      },
-      {
-        image: "/front_page/image4.PNG",
-        title: "Trekking",
-      },
-      {
-        image: "/front_page/image5.PNG",
-        title: "Dining",
-      },
-    ].map((item) => (
-      <div
-        key={item.title}
-        className="relative h-[240px] overflow-hidden group"
-      >
-        <img
-          src={item.image}
-          alt={item.title}
-          className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 "
-        />
+  {
+    image: "/front_page/image1.PNG",
+    title: "Stargazing",
+  },
+  {
+    image: "/front_page/image2.PNG",
+    title: "Bird Watching",
+  },
+  {
+    image: "/front_page/image3.PNG",
+    title: "Estate Walks",
+  },
+  {
+    image: "/front_page/image4.PNG",
+    title: "Trekking",
+  },
+  {
+    image: "/front_page/image5.PNG",
+    title: "Dining",
+  },
+].map((item) => {
+  const card = (
+    <div className="relative h-[240px] overflow-hidden group cursor-pointer">
+      <img
+        src={item.image}
+        alt={item.title}
+        className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+      />
 
-        {/* Dark translucent overlay */}
-        <div className="absolute inset-0 bg-black/35 group-hover:bg-black/45 transition-colors duration-500" />
+      <div className="absolute inset-0 bg-black/35 group-hover:bg-black/45 transition-colors duration-500" />
 
-        {/* Text Box */}
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="border border-vanilla bg-black/20 backdrop-blur-sm px-8 py-4 text-center transition-all duration-300 group-hover:bg-black/35">
-            <h3 className="font-display text-2xl text-vanilla mb-2">
-              {item.title}
-            </h3>
-
-            {/* <div className="w-20 h-px bg-vanilla mx-auto" /> */}
-          </div>
+      <div className="absolute inset-0 flex items-center justify-center">
+        <div className="border border-vanilla bg-black/20 backdrop-blur-sm px-8 py-4 text-center transition-all duration-300 group-hover:bg-black/35">
+          <h3 className="font-display text-2xl text-vanilla">
+            {item.title}
+          </h3>
         </div>
       </div>
-    ))}
+    </div>
+  );
+
+  return item.title === "Dining" ? (
+    <Link key={item.title} href="/dining">
+      {card}
+    </Link>
+  ) : (
+    <div key={item.title}>
+      {card}
+    </div>
+  );
+})}
 
   </div>
 </section>

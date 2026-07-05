@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import {
   Instagram,
@@ -7,9 +8,11 @@ import {
   Phone,
   Mail,
 } from "lucide-react";
+import MapLocation from "@/components/MapLocation";
 
 export default function Footer() {
   return (
+    
     <footer className="bg-coffee text-porcelain">
       <div className="max-w-6xl mx-auto px-6 md:px-10 py-14">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-20 items-start">
@@ -73,16 +76,7 @@ export default function Footer() {
                   className="text-palm mt-1 shrink-0"
                 />
 
-                <a
-                  href="https://maps.app.goo.gl/AH27CMgGtsKM8Gzv6?g_st=ic"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-palm transition-colors"
-                >
-                  Hunasemakki, Kallugudde Road,
-                  <br />
-                  Chikmagalur - 577133
-                </a>
+                <MapLocation />
               </li>
 
               <li className="flex items-center justify-center md:justify-start gap-4">
@@ -100,7 +94,13 @@ export default function Footer() {
                   strokeWidth={1.5}
                   className="text-palm shrink-0"
                 />
-                reservations@damairesorts.com
+
+                <Link
+                  href="/contact#contact-form"
+                  className="hover:text-palm transition-colors"
+                >
+                  reservations@damairesorts.com
+                </Link>
               </li>
             </ul>
           </div>
