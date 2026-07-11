@@ -72,7 +72,7 @@ export default function Sidebar() {
 </Link>
 
         <Link
-          href="/booking"
+          href="https://bookingengine.stayflexi.com/?hotel_id=38902"
           className="hidden sm:inline-block border border-vanilla/40 text-vanilla text-xs tracking-[0.2em] uppercase px-5 py-2 hover:bg-vanilla hover:text-coffee transition-all duration-300"
         >
           Book Now
