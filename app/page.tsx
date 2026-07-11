@@ -31,13 +31,16 @@ export default function HomePage() {
 
       {/* Hero Section */}
       <section className="relative h-[130vh] w-full overflow-hidden">
-        <Image
-          src="/room_pics/opening_image.PNG"
-          alt="La Damai Resort overwater villas at golden hour"
-          fill
-          priority
-          className="object-cover w-full"
-        />
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          className="absolute inset-0 h-full w-full object-cover"
+        >
+          <source src="/IMG_9525.mp4" type="video/mp4" />
+        </video>
         <div className="absolute inset-0 bg-gradient-to-b from-coffee/50 via-coffee/20 to-coffee/60" />
 
         {/* Logo top right */}
@@ -61,19 +64,19 @@ export default function HomePage() {
               In the echoes of peace 
             </p>
             <h1 className="font-display text-porcelain text-4xl md:text-6xl lg:text-7xl leading-tight mb-6">
-              Chikamagaluru's
+              Luxury hidden within 
               <br />
-              luxury retreat...
+              the coffee hills
             </h1>
             <p className="text-porcelain/80 font-semibold text-sm md:text-base leading-relaxed mb-10 max-w-md">
-              A sanctuary in the hills of Chikmagalur, where silence lingers and mornings arrive gently. In the echos of peace.
+              Escape into private suites, misty mornings, curated experiences and timeless luxury.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
-                href="/booking"
+                href="https://bookingengine.stayflexi.com/?hotel_id=38902"
                 className="bg-vanilla text-coffee px-8 py-4 text-xs uppercase tracking-[0.25em] hover:bg-palm transition-colors duration-300"
               >
-                Book Your Stay
+                Book Your Escape
               </Link>
               <Link
                 href="/rooms"
@@ -408,106 +411,113 @@ export default function HomePage() {
       </h2>
     </div>
 
-    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 text-center">
+<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 text-center">
 
-      <div className="flex flex-col items-center gap-4">
-        <Mountain size={30} strokeWidth={1.5} className="text-palm" />
-        <div>
-          <h3 className="font-semibold text-coffee">
-            Devaramane Betta
-          </h3>
-          <p className="text-sm text-coffee/60">
-            45 km
-          </p>
-        </div>
-      </div>
-
-      <div className="flex flex-col items-center gap-4">
-        <Waves size={30} strokeWidth={1.5} className="text-palm" />
-        <div>
-          <h3 className="font-semibold text-coffee">
-            Hirekolale Lake
-          </h3>
-          <p className="text-sm text-coffee/60">
-            24 km
-          </p>
-        </div>
-      </div>
-
-      <div className="flex flex-col items-center gap-4">
-        <Mountain size={30} strokeWidth={1.5} className="text-palm" />
-        <div>
-          <h3 className="font-semibold text-coffee">
-            Rangana Betta
-          </h3>
-          <p className="text-sm text-coffee/60">
-            5 km
-          </p>
-        </div>
-      </div>
-
-      <div className="flex flex-col items-center gap-4">
-        <Trees size={30} strokeWidth={1.5} className="text-palm" />
-        <div>
-          <h3 className="font-semibold text-coffee">
-            Bhadra Wildlife Sanctuary
-          </h3>
-          <p className="text-sm text-coffee/60">
-            32 km
-          </p>
-        </div>
-      </div>
-
-      <div className="flex flex-col items-center gap-4">
-        <Coffee size={30} strokeWidth={1.5} className="text-palm" />
-        <div>
-          <h3 className="font-semibold text-coffee">
-            Coffee Museum
-          </h3>
-          <p className="text-sm text-coffee/60">
-            25 km
-          </p>
-        </div>
-      </div>
-
-      <div className="flex flex-col items-center gap-4">
-        <Mountain size={30} strokeWidth={1.5} className="text-palm" />
-        <div>
-          <h3 className="font-semibold text-coffee">
-            Mullayanagiri Peak
-          </h3>
-          <p className="text-sm text-coffee/60">
-            37 km
-          </p>
-        </div>
-      </div>
-
-      <div className="flex flex-col items-center gap-4">
-        <Waves size={30} strokeWidth={1.5} className="text-palm" />
-        <div>
-          <h3 className="font-semibold text-coffee">
-            Hebbe Falls
-          </h3>
-          <p className="text-sm text-coffee/60">
-            39 km
-          </p>
-        </div>
-      </div>
-
-      <div className="flex flex-col items-center gap-4">
-          <Compass size={30} strokeWidth={1.5} className="text-palm" />
-          <div>
-            <h3 className="font-semibold text-coffee">
-              Z Point
-            </h3>
-            <p className="text-sm text-coffee/60">
-              76 km
-            </p>
-          </div>
-      </div>
-
+  {/* 1. Rangana Betta */}
+  <div className="flex flex-col items-center gap-4">
+    <Mountain size={30} strokeWidth={1.5} className="text-palm" />
+    <div>
+      <h3 className="font-semibold text-coffee">
+        Rangana Betta
+      </h3>
+      <p className="text-sm text-coffee/60">
+        5 km
+      </p>
     </div>
+  </div>
 
+  {/* 2. Coffee Museum */}
+  <div className="flex flex-col items-center gap-4">
+    <Coffee size={30} strokeWidth={1.5} className="text-palm" />
+    <div>
+      <h3 className="font-semibold text-coffee">
+        Coffee Museum
+      </h3>
+      <p className="text-sm text-coffee/60">
+        25 km
+      </p>
+    </div>
+  </div>
+
+  {/* 3. Mullayanagiri Peak */}
+  <div className="flex flex-col items-center gap-4">
+    <Mountain size={30} strokeWidth={1.5} className="text-palm" />
+    <div>
+      <h3 className="font-semibold text-coffee">
+        Mullayanagiri Peak
+      </h3>
+      <p className="text-sm text-coffee/60">
+        37 km
+      </p>
+    </div>
+  </div>
+
+  {/* 4. Bhadra Wildlife Sanctuary */}
+  <div className="flex flex-col items-center gap-4">
+    <Trees size={30} strokeWidth={1.5} className="text-palm" />
+    <div>
+      <h3 className="font-semibold text-coffee">
+        Bhadra Wildlife Sanctuary
+      </h3>
+      <p className="text-sm text-coffee/60">
+        32 km
+      </p>
+    </div>
+  </div>
+
+  {/* 5. Hirekolale Lake */}
+  <div className="flex flex-col items-center gap-4">
+    <Waves size={30} strokeWidth={1.5} className="text-palm" />
+    <div>
+      <h3 className="font-semibold text-coffee">
+        Hirekolale Lake
+      </h3>
+      <p className="text-sm text-coffee/60">
+        24 km
+      </p>
+    </div>
+  </div>
+
+  {/* 6. Devaramane Betta */}
+  <div className="flex flex-col items-center gap-4">
+    <Mountain size={30} strokeWidth={1.5} className="text-palm" />
+    <div>
+      <h3 className="font-semibold text-coffee">
+        Devaramane Betta
+      </h3>
+      <p className="text-sm text-coffee/60">
+        45 km
+      </p>
+    </div>
+  </div>
+
+  {/* 7. Jhari Falls */}
+  <div className="flex flex-col items-center gap-4">
+    <Waves size={30} strokeWidth={1.5} className="text-palm" />
+    <div>
+      <h3 className="font-semibold text-coffee">
+        Jhari Falls
+      </h3>
+      <p className="text-sm text-coffee/60">
+        39 km
+      </p>
+    </div>
+  </div>
+
+  {/* 8. Z Point */}
+  <div className="flex flex-col items-center gap-4">
+    <Compass size={30} strokeWidth={1.5} className="text-palm" />
+    <div>
+      <h3 className="font-semibold text-coffee">
+        Z Point
+      </h3>
+      <p className="text-sm text-coffee/60">
+        76 km
+      </p>
+    </div>
+  </div>
+
+</div>
   </div>
 </section>
 

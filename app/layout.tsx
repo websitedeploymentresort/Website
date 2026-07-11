@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Playfair_Display, Jost } from "next/font/google";
 import "./globals.css";
-
+import AmbientAudio from "@/components/AmbientAudio";
 const playfair = Playfair_Display({
   variable: "--font-playfair",
   subsets: ["latin"],
@@ -32,6 +32,7 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col bg-porcelain text-coffee">
         {children}
+        <AmbientAudio />
       </body>
     </html>
   );

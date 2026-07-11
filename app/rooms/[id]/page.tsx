@@ -170,6 +170,7 @@ import {
   BadgeCheck,
   Droplets,
   ShowerHead,
+  Ruler
 } from "lucide-react";
 
 const iconMap = {
@@ -261,24 +262,32 @@ const images = getRoomImages(id);
 
                 <div className="grid sm:grid-cols-2 gap-x-10 gap-y-5">
 
-                  {room.highlights.map((item) => {
-              const Icon = iconMap[item.icon as keyof typeof iconMap];
+  {/* Room Area */}
+  <div className="flex items-center gap-3">
+    <Ruler size={18} className="text-palm shrink-0" />
+    <span className="text-coffee/80">
+      {room.area}
+    </span>
+  </div>
 
-              return (
-                <div
-                  key={item.text}
-                  className="flex items-center gap-3"
-                >
-                  <Icon size={18} className="text-palm shrink-0" />
-              
-                  <span className="text-coffee/80">
-                    {item.text}
-                  </span>
-                </div>
-              );
-            })}
+  {room.highlights.map((item) => {
+    const Icon = iconMap[item.icon as IconName];
 
-                </div>
+    return (
+      <div
+        key={item.text}
+        className="flex items-center gap-3"
+      >
+        <Icon size={18} className="text-palm shrink-0" />
+
+        <span className="text-coffee/80">
+          {item.text}
+        </span>
+      </div>
+    );
+  })}
+
+</div>
 
               </div>
 
@@ -327,9 +336,15 @@ const images = getRoomImages(id);
                   Per Night
                 </span>
 
-                <h2 className="font-display text-6xl text-coffee mb-6">
-                  ₹{room.price.toLocaleString("en-IN")}
-                </h2>
+                <div className="flex items-end gap-3 mb-6">
+                  <h2 className="font-display text-6xl text-coffee leading-none">
+                    ₹{room.price.toLocaleString("en-IN")}
+                  </h2>
+                          
+                  <span className="text-sm md:text-base text-coffee/60 mb-1">
+                    + taxes
+                  </span>
+                </div>
 
                 <div className="space-y-2 text-coffee/60 mb-10">
 
@@ -340,7 +355,7 @@ const images = getRoomImages(id);
                 </div>
 
                 <Link
-                  href={`/booking?room=${room.id}`}
+                  href={"https://bookingengine.stayflexi.com/?hotel_id=38902"}
                   className="inline-flex items-center justify-center bg-palm hover:bg-coffee text-vanilla px-12 py-5 uppercase tracking-[0.25em] text-xs transition-colors duration-300"
                 >
                   Book Now

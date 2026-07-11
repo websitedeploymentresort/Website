@@ -8,6 +8,7 @@ export type Room = {
   name: string;
   description: string;
   price: number;
+  area: string;        // e.g. "650 sq. ft."
   size: string;
   occupancy: string;
   image: string;
@@ -23,9 +24,10 @@ export const rooms: Room[] = [
     description:
       "For couples seeking privacy and comfort, featuring a private jacuzzi, scenic balcony, walk-in wardrobe, and thoughtfully curated interiors overlooking serene landscapes.",
     price: 12999,
+    area: "650 sq.ft (60 sq.mt)",
     size: "Premium Suite",
     occupancy: "2 Adults",
-    image: "/room_pics/barbet-couple-suite/IMG_9172-cropped.PNG",
+    image: "/room_pics/barbet-couple-suite/forCard/IMG_9172-cropped.PNG",
 
     mealPlan: "Complimentary Breakfast",
 
@@ -57,7 +59,8 @@ amenities: [
     price: 14999,
     size: "Luxury Estate Suite",
     occupancy: "2 Adults",
-    image: "/room_pics/robin-estate-suite/IMG_9178-cropped.PNG",
+    area: "525 sq.ft (49 sq.mt)",
+    image: "/room_pics/robin-estate-suite/forCard/IMG_9178-cropped.PNG",
 
     mealPlan: "Complimentary Breakfast",
 highlights: [
@@ -87,6 +90,7 @@ highlights: [
     description:
       "A cozy and elegant suite crafted for couples, featuring a luxurious bathtub, private backyard, and intimate spaces designed for relaxation amidst nature.",
     price: 11999,
+    area: "550 sq.ft (51 sq.mt)",
     size: "Couple Suite",
     occupancy: "2 Adults",
     image: "/room_pics/canary-couple-suite/IMG_9174.PNG",
@@ -106,7 +110,6 @@ highlights: [
   { icon: "wifi", text: "Complimentary Wi-Fi" },
   { icon: "coffee", text: "Tea / Coffee Maker" },
   { icon: "badge", text: "Luxury Toiletries" },
-  { icon: "bath", text: "Bath Robe" },
   { icon: "waves", text: "Swimming Pool Access" },
   { icon: "gamepad", text: "Indoor Games" },
   { icon: "bird", text: "Bird Watching Experience" },
@@ -119,6 +122,7 @@ highlights: [
     description:
       "A spacious family-oriented cottage with panoramic estate views and an exclusive private backyard, perfect for families seeking comfort and tranquility.",
     price: 16999,
+    area: "475 sq.ft (44 sq.mt)",
     size: "Family Cottage",
     occupancy: "4 Adults",
     image: "/room_pics/hornbill-estate-view/IMG_9362.PNG",
@@ -128,7 +132,8 @@ highlights: [
     highlights: [
   { icon: "mountain", text: "Estate View" },
   { icon: "trees", text: "Private Backyard" },
-  { icon: "home", text: "Spacious Family Cottage" },
+  { icon: "home", text: "Spacious Family cottage with 2 King size beds" },
+  { icon: "mountain", text: "Panoramic Mountain View" }
 ],
 
     amenities: [
@@ -151,6 +156,7 @@ highlights: [
     description:
       "Overlooking the resort pool, the Silverbill Cottage offers generous family accommodations, a private backyard, and easy access to all resort amenities.",
     price: 17999,
+    area: "475 sq.ft (44 sq.mt)",
     size: "Family Cottage",
     occupancy: "4 Adults",
     image: "/room_pics/silverbill-pool-view/IMG_9362.PNG",
@@ -158,9 +164,10 @@ highlights: [
     mealPlan: "Complimentary Breakfast",
 
     highlights: [
-  { icon: "waves", text: "Pool View" },
+  { icon: "mountain", text: "Estate View" },
   { icon: "trees", text: "Private Backyard" },
-  { icon: "home", text: "Family Cottage" },
+  { icon: "home", text: "Spacious Family cottage with 2 King size beds" },
+  { icon: "mountain", text: "Panoramic Mountain View" }
 ],
 
     amenities: [
@@ -170,7 +177,6 @@ highlights: [
   { icon: "wifi", text: "Complimentary Wi-Fi" },
   { icon: "coffee", text: "Tea / Coffee Maker" },
   { icon: "badge", text: "Luxury Toiletries" },
-  { icon: "bath", text: "Bath Robe" },
   { icon: "waves", text: "Swimming Pool Access" },
   { icon: "gamepad", text: "Indoor Games" },
   { icon: "bird", text: "Bird Watching Experience" },
@@ -179,17 +185,18 @@ highlights: [
 ];
 export type Review = {
   id: string;
-  name: string;  
+  name: string;
   rating: number;
   text: string;
-  
+  source: "google" | "instagram";
 };
 
 export const reviews: Review[] = [
   {
     id: "r1",
-    name: "User",
+    name: "Rahul Pandey",
     rating: 5,
+    source: "instagram",
     text: `A true Trouvaille.
 
            In my professional world, Trouvaille is a travel program we run for our business partners. In French, it means "a lucky find."
@@ -209,17 +216,20 @@ export const reviews: Review[] = [
     id: "r2",
     name: "Ruchi Gahlot",
     rating: 5,
+    source: "google",
     text: "The stay is beautiful, good escape to the city life. Definitely would like to come back again and enjoy the peace and serene surrounding."  },
   {
     id: "r3",
     name: "Anshika Garg",
     rating: 5,
+    source: "google",
     text: "11/10 stay at La Damai! A serene and beautiful experience with amazing food and peaceful vibes. The place feels calm and chaotic in its own unique way! A special mention to the owner Madan, whose warmth and hospitality made the stay even more memorable. All and all the stay was worth!"
   },
   {
     id: "r4",
     name: "Vrunda Kalyankar",
     rating: 5,
+    source: "google",
     text: "Excellent experience. The rooms are wonderfully done with exceptional taste. Each rooms offers a different experience and the food is delicious. It’s away from city so you’ll be getting the perfect serene experience. Place is a must visit will be sure to come back again :)"
   },
 ];

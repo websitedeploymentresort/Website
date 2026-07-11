@@ -113,7 +113,7 @@ export default function Footer() {
 
             <div className="flex justify-center md:justify-end gap-8">
               <a
-                href="https://www.instagram.com/ladamai.chikmagalur/"
+                href="https://www.instagram.com/la_damai.chikmagalur/"
                 className="text-vanilla hover:text-palm transition-colors"
               >
                 <Instagram size={30} strokeWidth={1.5} />

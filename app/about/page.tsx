@@ -32,29 +32,33 @@ export default function AboutPage() {
           </div>
 
           <div className="order-1 lg:order-2">
-            <p className="text-palm text-xs tracking-[0.4em] uppercase mb-4">
-              Since 2009
-            </p>
             <h2 className="font-display text-3xl md:text-5xl mb-6 text-coffee">
               Born From A Love Of Untouched Places
             </h2>
             <p className="text-coffee/70 leading-relaxed text-sm md:text-base mb-5">
-              Nestled amidst the lush coffee estates of Chikmagalur, La Damai was created
-              as a peaceful escape where guests can slow down, reconnect with nature, and
-              experience the warmth of genuine hospitality in an intimate setting.
+            Nestled amidst the mist-covered coffee estates of Chikmagalur, La Damai is a sanctuary where nature, luxury, and tranquility exist in perfect harmony. Conceived as an intimate retreat, it invites guests to slow down, reconnect with what truly matters, and embrace the gentle rhythm of the Western Ghats.
             </p>
 
             <p className="text-coffee/70 leading-relaxed text-sm md:text-base mb-5">
-              Every villa has been carefully designed to blend contemporary comfort with
-              the surrounding landscape, offering elegant interiors, modern amenities, and
-              uninterrupted views that celebrate the beauty of the Western Ghats.
-            </p>
+            Every villa has been thoughtfully crafted to blend contemporary elegance with the surrounding landscape. Spacious interiors, curated comforts, private outdoor spaces, and sweeping estate views create an experience that feels both refined and deeply connected to nature.</p>
 
             <p className="text-coffee/70 leading-relaxed text-sm md:text-base">
-              With just five exclusive villas, La Damai offers a level of privacy and
-              personalized service that larger resorts cannot match, ensuring every stay
-              feels relaxed, exclusive, and truly memorable.
+            With only five exclusive villas, La Damai offers an uncommon sense of privacy and personalized hospitality. Every stay is carefully tailored, allowing each guest to experience the warmth of heartfelt service, the serenity of the hills, and moments that linger long after the journey ends.
             </p>
+            <br></br>
+            <div className="mt-6 flex flex-col items-end text-right">
+  <p className="mb-2 text-coffee/70 italic">
+    — With Love,
+  </p>
+
+  <Image
+    src="/logo/logo_normal-removebg-preview.png"
+    alt="La Damai"
+    width={260}
+    height={70}
+    className="h-auto w-36 md:w-44"
+  />
+</div>
           </div>
         </div>
       </section>
@@ -80,7 +84,7 @@ export default function AboutPage() {
                 Sustainability
               </h3>
               <p className="text-sm text-coffee/70 leading-relaxed max-w-xs">
-                From eco-friendly amenities to thoughtfully chosen materials, over 80% of the products used throughout La Damai are biodegradable, reflecting our commitment to responsible hospitality.
+                We believe that luxury and responsibility can coexist beautifully. From eco-friendly amenities to thoughtfully sourced materials, over 80% of the products used across La Damai are biodegradable, reflecting our commitment to preserving the natural beauty that surrounds us for generations to come.
               </p>
             </div>
             <div className="flex flex-col items-center">
@@ -91,8 +95,7 @@ export default function AboutPage() {
                 Excellence
               </h3>
               <p className="text-sm text-coffee/70 leading-relaxed max-w-xs">
-                Every detail, from linens to cuisine, is chosen with an
-                uncompromising standard of quality and craftsmanship.
+                True luxury lies in the details. Every element—from the comfort of our linens and the design of our spaces to the meals we serve and the experiences we curate—is thoughtfully chosen to deliver exceptional quality and timeless elegance.
               </p>
             </div>
             <div className="flex flex-col items-center">
@@ -103,8 +106,7 @@ export default function AboutPage() {
                 Genuine Hospitality
               </h3>
               <p className="text-sm text-coffee/70 leading-relaxed max-w-xs">
-                Our team treats every guest as a returning friend — warm,
-                attentive, and quietly anticipating your every need.
+                At La Damai, hospitality is heartfelt and personal. We welcome every guest with warmth, care, and genuine attention, creating meaningful experiences that feel effortless, unhurried, and truly memorable.
               </p>
             </div>
           </div>
