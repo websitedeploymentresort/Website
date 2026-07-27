@@ -6,6 +6,7 @@ import RoomCard from "@/components/RoomCard";
 import HomeRoomCard from "@/components/HomeRoomCard";
 import ReviewCard from "@/components/ReviewCard";
 import { rooms, reviews } from "@/lib/data";
+import ExperienceVideo from "@/components/ExperienceVideo";
 import {
   ArrowRight,
   MapPin,
@@ -210,7 +211,7 @@ export default function HomePage() {
     </div>
   </div>
 </section>
-{/* Experience Gallery */}
+{/* Experience Gallery
 <section className="bg-porcelain py-0">
   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5">
 
@@ -276,7 +277,8 @@ export default function HomePage() {
 })}
 
   </div>
-</section>
+</section> */}
+<ExperienceVideo />
       {/* Rooms Section */}
       <section className="bg-porcelain pt-8 pb-8 md:pt-10 md:pb-10">
         <div className="max-w-7xl mx-auto px-6 md:px-10">

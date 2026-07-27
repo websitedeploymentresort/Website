@@ -333,10 +333,9 @@ const images = getRoomImages(id);
               <div className="border-t border-coffee/10 pt-14">
 
                 <span className="text-xs uppercase tracking-[0.35em] text-palm block mb-5">
-                  Per Night
                 </span>
 
-                <div className="flex items-end gap-3 mb-6">
+                {/* <div className="flex items-end gap-3 mb-6">
                   <h2 className="font-display text-6xl text-coffee leading-none">
                     ₹{room.price.toLocaleString("en-IN")}
                   </h2>
@@ -344,15 +343,9 @@ const images = getRoomImages(id);
                   <span className="text-sm md:text-base text-coffee/60 mb-1">
                     + taxes
                   </span>
-                </div>
+                </div> */}
 
-                <div className="space-y-2 text-coffee/60 mb-10">
-
-                  <p>{room.occupancy}</p>
-
-                  <p>{room.mealPlan}</p>
-
-                </div>
+            
 
                 <Link
                   href={"https://bookingengine.stayflexi.com/?hotel_id=38902"}
