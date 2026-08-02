@@ -95,7 +95,14 @@ export default function Sidebar() {
       >
         <div className="flex items-center justify-between px-8 py-6 border-b border-porcelain/10">
           <span className="font-display text-vanilla text-xl tracking-[0.3em] uppercase">
-            La Damai
+            <Image
+              src="/logo/navbar-Logo_Inverse_horizontal_copy_copy.JPG-removebg-preview.png"
+              alt="La Damai"
+              width={240}
+              height={60}
+              priority
+              className="h-10 md:h-12 w-auto object-contain"
+            />
           </span>
           <button
             aria-label="Close menu"

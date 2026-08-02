@@ -118,7 +118,7 @@ highlights: [
 
   {
     id: "hornbill-estate-view",
-    name: "Hornbill Cottage",
+    name: "Hornbill Family Cottage",
     description:
       "A spacious family-oriented cottage with panoramic estate views and an exclusive private backyard, perfect for families seeking comfort and tranquility.",
     price: 16999,
@@ -152,7 +152,7 @@ highlights: [
 
   {
     id: "silverbill-pool-view",
-    name: "Silverbill Cottage",
+    name: "Silverbill Family Cottage",
     description:
       "Overlooking the resort pool, the Silverbill Cottage offers generous family accommodations, a private backyard, and easy access to all resort amenities.",
     price: 17999,

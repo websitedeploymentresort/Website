@@ -16,9 +16,7 @@ export default function RoomCard({ room }: { room: Room }) {
           fill
           className="object-cover transition-transform duration-700 group-hover:scale-105"
         />
-        <div className="absolute top-4 right-4 bg-coffee text-vanilla text-xs tracking-[0.2em] uppercase px-3 py-1.5">
-          From ₹{room.price}/night
-        </div>
+        
       </div>
 
       <div className="p-4 md:p-4">

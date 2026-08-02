@@ -45,12 +45,21 @@ export default function ContactPage() {
 
             <div className="flex items-start gap-4">
               <MapPin
-                size={22}
-                strokeWidth={1.5}
-                className="text-palm shrink-0 mt-1"
-              />
+                  size={20}
+                  strokeWidth={1.5}
+                  className="text-palm mt-1 shrink-0"
+                />
 
-              <MapLocation />
+                <a
+                  href="https://maps.app.goo.gl/cyEybjTLgwtZhtpx9"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-porcelain/80 leading-relaxed hover:text-palm transition-colors"
+                >
+                  Hunasemakki, Kallugudde Road,
+                  <br />
+                  Chikmagalur - 577133
+                </a>
             </div>
 
             <div className="flex items-start gap-4">
@@ -88,7 +97,7 @@ export default function ContactPage() {
               />
 
               <p className="text-sm text-porcelain/80 leading-relaxed">
-                Front Desk: 11 AM – 11 PM
+                Front Desk: 9 AM – 9 PM
               </p>
             </div>
 

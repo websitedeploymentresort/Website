@@ -8,7 +8,7 @@ import {
   Phone,
   Mail,
 } from "lucide-react";
-import MapLocation from "@/components/MapLocation";
+// import MapLocation from "@/components/MapLocation";
 
 export default function Footer() {
   return (
@@ -76,7 +76,16 @@ export default function Footer() {
                   className="text-palm mt-1 shrink-0"
                 />
 
-                <MapLocation />
+                <a
+                  href="https://maps.app.goo.gl/cyEybjTLgwtZhtpx9"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-porcelain/80 leading-relaxed hover:text-palm transition-colors"
+                >
+                  Hunasemakki, Kallugudde Road,
+                  <br />
+                  Chikmagalur - 577133
+                </a>
               </li>
 
               <li className="flex items-center justify-center md:justify-start gap-4">
