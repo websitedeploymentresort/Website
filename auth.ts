@@ -1,11 +1,8 @@
 import NextAuth from "next-auth";
 import Credentials from "next-auth/providers/credentials";
-import { createClient } from "@supabase/supabase-js";
 
-const supabaseAdmin = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.SUPABASE_SERVICE_ROLE_KEY!
-);
+const adminEmail = process.env.ADMIN_EMAIL ?? "admin@aranya-resort.com";
+const adminPassword = process.env.ADMIN_PASSWORD ?? "welcome123";
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
   pages: {
@@ -27,20 +24,18 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
 
         if (!email || !password) return null;
 
-        const { data, error } = await supabaseAdmin.auth.signInWithPassword({
-          email,
-          password,
-        });
-
-        if (error || !data.user) {
-          return null;
+        if (
+          email.toLowerCase() === adminEmail.toLowerCase() &&
+          password === adminPassword
+        ) {
+          return {
+            id: "local-admin",
+            email: adminEmail,
+            name: "Resort Admin",
+          };
         }
 
-        return {
-          id: data.user.id,
-          email: data.user.email,
-          name: data.user.user_metadata?.full_name ?? data.user.email,
-        };
+        return null;
       },
     }),
   ],
