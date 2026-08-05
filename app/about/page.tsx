@@ -23,7 +23,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-6 md:px-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="relative h-[400px] md:h-[520px] order-2 lg:order-1">
             <Image
-              src="/room_pics/IMG_9387.PNG"
+              src="/room_pics/about_us.png"
               alt="La Damai Resort grounds"
               fill
               className="object-cover"
