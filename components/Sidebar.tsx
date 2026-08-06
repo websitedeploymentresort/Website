@@ -10,7 +10,7 @@ const navLinks = [
   { href: "/rooms", label: "Rooms & Suites" },
   { href: "/gallery", label: "Gallery" },
   { href: "/contact", label: "Contact Us" },
-  { href: "/booking", label: "Book Now" },
+  { href: "https://bookingengine.stayflexi.com/?hotel_id=38902", label: "Book Now" },
 ];
 
 export default function Sidebar() {
