@@ -53,7 +53,7 @@ export default function Footer() {
 
               <li>
                 <Link
-                  href="/booking"
+                  href="https://bookingengine.stayflexi.com/?hotel_id=38902"
                   className="hover:text-palm transition-colors"
                 >
                   Book Now

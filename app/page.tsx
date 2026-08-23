@@ -24,6 +24,22 @@ import {
   Coffee,
   Compass,
 } from "lucide-react";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Luxury Resort in Chikmagalur | La Damai Resorts",
+  description:
+    "Book a luxury resort in Chikmagalur at La Damai Resorts with premium villas, coffee estate views, private jacuzzis, and curated nature experiences.",
+  keywords: [
+    "luxury resort in chikmagalur",
+    "best resort in chikmagalur",
+    "coffee estate resort",
+    "couple stay chikmagalur",
+  ],
+  alternates: {
+    canonical: "/",
+  },
+};
 
 export default function HomePage() {
   return (
@@ -65,12 +81,12 @@ export default function HomePage() {
               In the echoes of peace 
             </p>
             <h1 className="font-display text-porcelain text-4xl md:text-6xl lg:text-7xl leading-tight mb-6">
-              Luxury hidden within 
+              Luxury resort in 
               <br />
-              the coffee hills
+              Chikmagalur&apos;s coffee hills
             </h1>
             <p className="text-porcelain/80 font-semibold text-sm md:text-base leading-relaxed mb-10 max-w-md">
-              Escape into private suites, misty mornings, curated experiences and timeless luxury.
+              Escape into a premium resort in Chikmagalur with private suites, misty mornings, curated nature experiences, and timeless luxury.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link

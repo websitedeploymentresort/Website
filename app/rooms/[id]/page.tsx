@@ -147,6 +147,7 @@
 // }
 
 import Image from "next/image";
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 
@@ -199,6 +200,45 @@ import Footer from "@/components/Footer";
 import { rooms } from "@/lib/data";
 import { getRoomImages } from "@/lib/roomImages";
 
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}): Promise<Metadata> {
+  const { id } = await params;
+  const room = rooms.find((item) => item.id === id);
+
+  if (!room) {
+    return {
+      title: "Room Not Found | La Damai Resort",
+      description: "The requested room could not be found.",
+    };
+  }
+
+  const highlightSummary = room.highlights
+    .slice(0, 3)
+    .map((item) => item.text.toLowerCase())
+    .join(", ");
+
+  return {
+    title: `${room.name} | La Damai Resorts`,
+    description: `${room.name} at La Damai Resorts in Chikmagalur offers ${room.size.toLowerCase()} with ${highlightSummary} for a luxurious stay in the Western Ghats.`,
+    alternates: {
+      canonical: `/rooms/${id}`,
+    },
+    openGraph: {
+      title: `${room.name} | La Damai Resorts`,
+      description: `${room.name} at La Damai Resorts in Chikmagalur offers a premium stay with scenic views and luxury amenities.`,
+      url: `https://www.damairesorts.com/rooms/${id}`,
+      type: "article",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${room.name} | La Damai Resorts`,
+      description: `${room.name} at La Damai Resorts in Chikmagalur offers a premium stay with scenic views and luxury amenities.`,
+    },
+  };
+}
 
 export default async function RoomDetails({
   params,

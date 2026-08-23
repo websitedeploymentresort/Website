@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   },
 
   description:
-    "Experience luxury amidst the coffee plantations of Chikmagalur at La Damai Resorts. Enjoy premium villas, nature trails, stargazing, bonfires, fine dining, and unforgettable plantation stays.",
+    "Luxury resort in Chikmagalur with premium villas, coffee estate views, private jacuzzis, fine dining, and curated nature experiences for couples and families.",
 
   keywords: [
     "La Damai Resorts",
@@ -41,20 +41,41 @@ export const metadata: Metadata = {
     "Couple Resort Chikmagalur",
     "Family Resort Chikmagalur",
     "Best Resort in Chikmagalur",
+    "Chikmagalur resort",
+    "Coffee estate stay",
   ],
 
   alternates: {
     canonical: "/",
   },
 
+  robots: {
+    index: true,
+    follow: true,
+  },
+
+  icons: {
+    icon: "/logo/coffeebean.png",
+    shortcut: "/logo/coffeebean.png",
+    apple: "/logo/coffeebean.png",
+  },
+
   openGraph: {
     title: "La Damai Resorts | Luxury Resort in Chikmagalur",
     description:
-      "Escape to luxury in the heart of Chikmagalur with elegant stays, breathtaking views, and unforgettable experiences at La Damai Resorts.",
+      "Escape to a luxury resort in Chikmagalur with elegant stays, breathtaking coffee estate views, and unforgettable nature experiences.",
     url: "https://www.damairesorts.com",
     siteName: "La Damai Resorts",
     locale: "en_IN",
     type: "website",
+    images: [
+      {
+        url: "/logo/coffeebean.png",
+        width: 1200,
+        height: 630,
+        alt: "La Damai Resorts",
+      },
+    ],
   },
 
   twitter: {
@@ -62,6 +83,7 @@ export const metadata: Metadata = {
     title: "La Damai Resorts",
     description:
       "Luxury resort in Chikmagalur offering plantation stays, premium villas, and curated nature experiences.",
+    images: ["/logo/coffeebean.png"],
   },
 };
 
@@ -102,7 +124,7 @@ export default function RootLayout({
       email: "info@damairesorts.com",
 
       address: {
-        "@type": "PostalAddres",
+        "@type": "PostalAddress",
         streetAddress: "Hunasemakki, Kallugudde Road",
         addressLocality: "Chikmagalur",
         addressRegion: "Karnataka",

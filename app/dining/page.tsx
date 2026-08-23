@@ -35,7 +35,12 @@ const menuItems = [
 ];
 
 export const metadata = {
-  title: "Dining | La Damai Resort",
+  title: "Dining at La Damai Resorts | Multi-Cuisine Restaurant",
+  description:
+    "Enjoy a multi-cuisine dining experience at La Damai Resorts in Chikmagalur with breakfast, South Indian specialties, and scenic nature views.",
+  alternates: {
+    canonical: "/dining",
+  },
 };
 
 export default function DiningPage() {

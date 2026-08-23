@@ -9,7 +9,12 @@ import {
   BadgeInfo,
 } from "lucide-react";
 export const metadata = {
-  title: "Rooms & Suites | La Damai Resort",
+  title: "Rooms & Suites | La Damai Resorts",
+  description:
+    "Browse luxury rooms and suites at La Damai Resorts in Chikmagalur, including couple suites, family cottages, and estate-view stays.",
+  alternates: {
+    canonical: "/rooms",
+  },
 };
 
 export default function RoomsPage() {

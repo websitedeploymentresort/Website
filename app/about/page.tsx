@@ -5,7 +5,12 @@ import PageHero from "@/components/PageHero";
 import { Leaf, Award, HeartHandshake } from "lucide-react";
 
 export const metadata = {
-  title: "About Us | La Damai Resort",
+  title: "About La Damai Resorts | Luxury Resort in Chikmagalur",
+  description:
+    "Discover La Damai Resorts, a luxury plantation retreat in Chikmagalur offering privacy, nature, and personalized hospitality in the Western Ghats.",
+  alternates: {
+    canonical: "/about",
+  },
 };
 
 export default function AboutPage() {

@@ -5,7 +5,12 @@ import PageHero from "@/components/PageHero";
 import { getGalleryImages } from "@/lib/gallery";
 
 export const metadata = {
-  title: "Gallery | La Damai Resort",
+  title: "Gallery | La Damai Resorts",
+  description:
+    "View luxury villas, dining spaces, and scenic landscapes at La Damai Resorts in Chikmagalur through our resort gallery.",
+  alternates: {
+    canonical: "/gallery",
+  },
 };
 
 export default function GalleryPage() {

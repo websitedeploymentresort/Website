@@ -6,7 +6,12 @@ import MapLocation from "@/components/MapLocation";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import Link from "next/link";
 export const metadata = {
-  title: "Contact Us | La Damai Resort",
+  title: "Contact La Damai Resorts | Luxury Resort in Chikmagalur",
+  description:
+    "Plan your stay at La Damai Resorts in Chikmagalur by contacting us for reservations, room details, and local travel information.",
+  alternates: {
+    canonical: "/contact",
+  },
 };
 
 export default function ContactPage() {
