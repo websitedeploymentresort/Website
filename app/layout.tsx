@@ -55,10 +55,12 @@ export const metadata: Metadata = {
   },
 
   icons: {
-    icon: "/logo/coffeebean.png",
-    shortcut: "/logo/coffeebean.png",
-    apple: "/logo/coffeebean.png",
-  },
+  icon: [
+    { url: "/favicon.png", type: "image/png", sizes: "96x96" },
+  ],
+  shortcut: "/favicon.png",
+  apple: "/favicon.png",
+},
 
   openGraph: {
     title: "La Damai Resorts | Luxury Resort in Chikmagalur",

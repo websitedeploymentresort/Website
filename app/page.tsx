@@ -53,8 +53,9 @@ export default function HomePage() {
           muted
           loop
           playsInline
-          preload="auto"
-          className="absolute inset-0 h-full w-full object-cover"
+          poster="/videoposter/videoposter.png"
+          preload="metadata"
+          className="absolute inset-0 w-full h-full object-cover"
         >
           <source src="/IMG_9525.mp4" type="video/mp4" />
         </video>
