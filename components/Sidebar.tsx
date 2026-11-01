@@ -134,10 +134,32 @@ export default function Sidebar() {
             Follow Us
           </p>
           <div className="flex gap-5">
-            <Instagram size={20} strokeWidth={1.5} className="text-vanilla hover:text-palm transition-colors cursor-pointer" />
-            <Facebook size={20} strokeWidth={1.5} className="text-vanilla hover:text-palm transition-colors cursor-pointer" />
-            
-          </div>
+  <a
+    href="https://www.instagram.com/la_damai.chikmagalur/"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Visit La Damai Resorts on Instagram"
+  >
+    <Instagram
+      size={20}
+      strokeWidth={1.5}
+      className="text-vanilla hover:text-palm transition-colors cursor-pointer"
+    />
+  </a>
+
+  <a
+    href="https://www.facebook.com/YOUR_FACEBOOK_PAGE"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Visit La Damai Resorts on Facebook"
+  >
+    <Facebook
+      size={20}
+      strokeWidth={1.5}
+      className="text-vanilla hover:text-palm transition-colors cursor-pointer"
+    />
+  </a>
+</div>
           <p className="text-xs text-porcelain/40 mt-6 leading-relaxed">
             Hunasemakki
             <br />
