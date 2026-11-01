@@ -17,54 +17,54 @@ export type Room = {
   amenities: RoomFeature[];
 };
 
-export const rooms: Room[] = [
-  {
-    id: "barbet-couple-suite",
-    name: "Barbet Couple Suite",
-    description:
-      "For couples seeking privacy and comfort, featuring a private jacuzzi, scenic balcony, walk-in wardrobe, and thoughtfully curated interiors overlooking serene landscapes.",
-    price: 12999,
-    area: "650 sq.ft (60 sq.mt)",
-    size: "Premium Suite",
-    occupancy: "2 Adults",
-    image: "/room_pics/barbet-couple-suite/forCard/IMG_9172-cropped.PNG",
+  export const rooms: Room[] = [
+    {
+      id: "barbet-couple-suite",
+      name: "Barbet Couple Suite",
+      description:
+        "For couples seeking privacy and comfort, featuring a private jacuzzi, scenic balcony, walk-in wardrobe, and thoughtfully curated interiors overlooking serene landscapes.",
+      price: 12999,
+      area: "650 sq.ft (60 sq.mt)",
+      size: "Premium Suite",
+      occupancy: "2 Adults",
+      image: "/room_pics/barbet-couple-suite/forCard/IMG_9172-cropped.PNG",
 
-    mealPlan: "Complimentary Breakfast",
+      mealPlan: "Complimentary Breakfast",
 
-    highlights: [
-  { icon: "bath", text: "Private Jacuzzi" },
-  { icon: "mountain", text: "Scenic Balcony" },
-  { icon: "shirt", text: "Walk-in Wardrobe" },
-  { icon: "sparkles", text: "Premium Couple Layout" },
-],
+      highlights: [
+    { icon: "bath", text: "Private Jacuzzi" },
+    { icon: "mountain", text: "Scenic Balcony" },
+    { icon: "shirt", text: "Walk-in Wardrobe" },
+    { icon: "sparkles", text: "Premium Couple Layout" },
+  ],
 
-amenities: [
-  { icon: "bed", text: "King Size Bed" },
-  { icon: "droplets", text: "24×7 Hot Water" },
-  { icon: "snowflake", text: "Air Conditioning" },
-  { icon: "wifi", text: "Complimentary Wi-Fi" },
-  { icon: "coffee", text: "Tea / Coffee Maker" },
-  { icon: "badge", text: "Luxury Toiletries" },
-  { icon: "waves", text: "Swimming Pool Access" },
-  { icon: "gamepad", text: "Indoor Games" },
-  { icon: "bird", text: "Bird Watching Experience" },
-],},
+  amenities: [
+    { icon: "bed", text: "King Size Bed" },
+    { icon: "droplets", text: "24×7 Hot Water" },
+    { icon: "snowflake", text: "Air Conditioning" },
+    { icon: "wifi", text: "Complimentary Wi-Fi" },
+    { icon: "coffee", text: "Tea / Coffee Maker" },
+    { icon: "badge", text: "Luxury Toiletries" },
+    { icon: "waves", text: "Swimming Pool Access" },
+    { icon: "gamepad", text: "Indoor Games" },
+    { icon: "bird", text: "Bird Watching Experience" },
+  ],},
 
-  {
-    id: "robin-estate-suite",
-    name: "Robin Luxury Estate Suite",
-    description:
-      "An exclusive estate-view suite offering a private jacuzzi, open-style luxury bathroom, private backyard, and spacious walk-in wardrobe for an elevated retreat experience.",
-    price: 14999,
-    size: "Luxury Estate Suite",
-    occupancy: "2 Adults",
-    area: "525 sq.ft (49 sq.mt)",
-    image: "/room_pics/robin-estate-suite/forCard/IMG_9178-cropped.PNG",
+    {
+      id: "robin-estate-suite",
+      name: "Robin Luxury Estate Suite",
+      description:
+        "An exclusive estate-view suite offering a private jacuzzi, open-style luxury bathroom, private backyard, and spacious walk-in wardrobe for an elevated retreat experience.",
+      price: 14999,
+      size: "Luxury Estate Suite",
+      occupancy: "2 Adults",
+      area: "525 sq.ft (49 sq.mt)",
+      image: "/room_pics/robin-estate-suite/forCard/IMG_9178-cropped.PNG",
 
-    mealPlan: "Complimentary Breakfast",
-highlights: [
-  { icon: "bath", text: "Private Jacuzzi" },
-  { icon: "shower", text: "Open Style Luxury Bathroom" },
+      mealPlan: "Complimentary Breakfast",
+  highlights: [
+    { icon: "bath", text: "Private Jacuzzi" },
+    { icon: "shower", text: "Open Style Luxury Bathroom" },
   { icon: "trees", text: "Private Backyard" },
   { icon: "shirt", text: "Walk-in Wardrobe" },
 ],

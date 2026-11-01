@@ -130,9 +130,9 @@ export default function HomePage() {
         Why Choose Us
       </p> */}
 
-      <h3 className="font-display text-3xl md:text-4xl text-vanilla mb-14">
+      <h2 className="font-display text-3xl md:text-4xl text-vanilla mb-14">
         Why Guests Love La Damai
-      </h3>
+      </h2>
 
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-10">
 
@@ -142,9 +142,9 @@ export default function HomePage() {
             <Trees size={30} className="text-vanilla" />
           </div>
 
-          <h4 className="font-display text-[1.15rem] text-vanilla mb-2">
+          <h3 className="font-display text-[1.15rem] text-vanilla mb-2">
             Secluded Escape
-          </h4>
+          </h3>
 
           <p className="text-sm text-vanilla/75 leading-relaxed">
             Quiet coffee estate surroundings.</p>
@@ -156,9 +156,9 @@ export default function HomePage() {
             <Bath size={30} className="text-vanilla" />
           </div>
 
-          <h4 className="font-display text-[1.15rem] text-vanilla mb-2">
+          <h3 className="font-display text-[1.15rem] text-vanilla mb-2">
             Luxury Villas
-          </h4>
+          </h3>
 
           <p className="text-sm text-vanilla/75 leading-relaxed">
             Jacuzzis and luxury bathrooms.</p>
@@ -170,9 +170,9 @@ export default function HomePage() {
             <Heart size={30} className="text-vanilla" />
           </div>
 
-          <h4 className="font-display text-[1.15rem] text-vanilla mb-2">
+          <h3 className="font-display text-[1.15rem] text-vanilla mb-2">
             Romantic Stay
-          </h4>
+          </h3>
 
           <p className="text-sm text-vanilla/75 leading-relaxed">
             Curated stays for couples.
@@ -185,9 +185,9 @@ export default function HomePage() {
             <HomeIcon size={30} className="text-vanilla" />
           </div>
 
-          <h4 className="font-display text-[1.15rem] text-vanilla mb-2">
+          <h3 className="font-display text-[1.15rem] text-vanilla mb-2">
             Family Friendly
-          </h4>
+          </h3>
 
           <p className="text-sm text-vanilla/75 leading-relaxed">
             Spacious cottages for families.
@@ -200,9 +200,9 @@ export default function HomePage() {
             <ConciergeBell size={30} className="text-vanilla" />
           </div>
 
-          <h4 className="font-display text-[1.15rem] text-vanilla mb-2">
+          <h3 className="font-display text-[1.15rem] text-vanilla mb-2">
             Warm Hospitality
-          </h4>
+          </h3>
 
           <p className="text-sm text-vanilla/75 leading-relaxed">
             Warm, personalized guest service.
@@ -215,9 +215,9 @@ export default function HomePage() {
             <BedDouble size={30} className="text-vanilla" />
           </div>
 
-          <h4 className="font-display text-[1.15rem] text-vanilla mb-2">
+          <h3 className="font-display text-[1.15rem] text-vanilla mb-2">
             Spacious Rooms
-          </h4>
+          </h3>
 
           <p className="text-sm text-vanilla/75 leading-relaxed">
             Large rooms with premium comfort.</p>
@@ -425,7 +425,7 @@ export default function HomePage() {
       </p>
 
       <h2 className="font-display text-3xl md:text-5xl text-coffee">
-        Places To Visit Nearby
+        Places To Visit Near La Damai Resorts, Chikmagalur 
       </h2>
     </div>
 

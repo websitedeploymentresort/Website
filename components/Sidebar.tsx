@@ -136,7 +136,7 @@ export default function Sidebar() {
           <div className="flex gap-5">
             <Instagram size={20} strokeWidth={1.5} className="text-vanilla hover:text-palm transition-colors cursor-pointer" />
             <Facebook size={20} strokeWidth={1.5} className="text-vanilla hover:text-palm transition-colors cursor-pointer" />
-            <TwitterIcon size={20} strokeWidth={1.5} className="text-vanilla hover:text-palm transition-colors cursor-pointer" />
+            
           </div>
           <p className="text-xs text-porcelain/40 mt-6 leading-relaxed">
             Hunasemakki

@@ -50,7 +50,7 @@ export default function DiningPage() {
 
       <PageHero
         title="Dining"
-        subtitle="A Multi-Cuisine Culinary Experience"
+        subtitle="A Multi-Cuisine Culinary Experience at Chikmagalur's La Damai Resorts"
         image={heroImage}
       />
 

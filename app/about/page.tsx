@@ -37,7 +37,12 @@ export default function AboutPage() {
           </div>
 
           <div className="order-1 lg:order-2">
-            <h2 className="font-display text-3xl md:text-5xl mb-6 text-coffee">
+
+            <h1 className="font-display text-3xl md:text-5xl mb-4 text-coffee">
+              About La Damai Resorts
+            </h1>
+                
+            <h2 className="font-display text-2xl md:text-3xl mb-6 text-coffee">
               Born From A Love Of Untouched Places
             </h2>
             <p className="text-coffee/70 leading-relaxed text-sm md:text-base mb-5">

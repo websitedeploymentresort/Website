@@ -1,56 +1,47 @@
-import { MetadataRoute } from "next";
+
+import type { MetadataRoute } from "next";
+import { rooms } from "../lib/data"; 
+const BASE_URL = "https://www.damairesorts.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://www.damairesorts.com";
-
-  return [
+  const staticPages: MetadataRoute.Sitemap = [
     {
-      url: baseUrl,
-      lastModified: new Date(),
+      url: BASE_URL,
       changeFrequency: "weekly",
-      priority: 1,
+      priority: 1.0,
     },
-
     {
-      url: `${baseUrl}/rooms`,
-      lastModified: new Date(),
+      url: `${BASE_URL}/rooms`,
       changeFrequency: "weekly",
       priority: 0.9,
     },
-
     {
-      url: `${baseUrl}/experiences`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-
-    {
-      url: `${baseUrl}/gallery`,
-      lastModified: new Date(),
+      url: `${BASE_URL}/dining`,
       changeFrequency: "monthly",
       priority: 0.8,
     },
-
     {
-      url: `${baseUrl}/about`,
-      lastModified: new Date(),
+      url: `${BASE_URL}/gallery`,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${BASE_URL}/about`,
       changeFrequency: "monthly",
       priority: 0.8,
     },
-
     {
-      url: `${baseUrl}/contact`,
-      lastModified: new Date(),
+      url: `${BASE_URL}/contact`,
       changeFrequency: "monthly",
-      priority: 0.8,
-    },
-
-    {
-      url: `${baseUrl}/book`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.9,
+      priority: 0.7,
     },
   ];
+
+  const roomPages: MetadataRoute.Sitemap = rooms.map((room) => ({
+    url: `${BASE_URL}/rooms/${room.id}`,
+    changeFrequency: "monthly",
+    priority: 0.8,
+  }));
+
+  return [...staticPages, ...roomPages];
 }
