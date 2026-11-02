@@ -148,7 +148,7 @@ export default function Sidebar() {
   </a>
 
   <a
-    href="https://www.facebook.com/YOUR_FACEBOOK_PAGE"
+    href="https://www.facebook.com/share/1G3tszjm5D/?mibextid=wwXIfr"
     target="_blank"
     rel="noopener noreferrer"
     aria-label="Visit La Damai Resorts on Facebook"

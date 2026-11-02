@@ -123,7 +123,7 @@ export default function RootLayout({
 
       telephone: "+91-9900064697",
 
-      email: "info@damairesorts.com",
+      email: "reservations@damairesorts.com",
 
       address: {
         "@type": "PostalAddress",
