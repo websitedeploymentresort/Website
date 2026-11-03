@@ -13,7 +13,7 @@ export const metadata = {
   description:
     "Browse luxury rooms and suites at La Damai Resorts in Chikmagalur, including couple suites, family cottages, and estate-view stays.",
   alternates: {
-    canonical: "/rooms",
+    canonical: "/luxury-rooms-in-chikmagalur",
   },
 };
 

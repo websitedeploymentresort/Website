@@ -9,7 +9,7 @@ export const metadata = {
   description:
     "Discover La Damai Resorts, a luxury plantation retreat in Chikmagalur offering privacy, nature, and personalized hospitality in the Western Ghats.",
   alternates: {
-    canonical: "/about",
+    canonical: "/about-la-damai-resorts",
   },
 };
 

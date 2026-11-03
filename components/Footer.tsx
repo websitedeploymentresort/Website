@@ -26,7 +26,7 @@ export default function Footer() {
             <ul className="space-y-3 text-base text-porcelain/70">
               <li>
                 <Link
-                  href="/about"
+                  href="/about-la-damai-resorts"
                   className="hover:text-palm transition-colors"
                 >
                   About Us
@@ -35,7 +35,7 @@ export default function Footer() {
 
               <li>
                 <Link
-                  href="/rooms"
+                  href="/luxury-rooms-in-chikmagalur"
                   className="hover:text-palm transition-colors"
                 >
                   Rooms &amp; Suites
@@ -44,7 +44,7 @@ export default function Footer() {
 
               <li>
                 <Link
-                  href="/gallery"
+                  href="/chikmagalur-resort-gallery"
                   className="hover:text-palm transition-colors"
                 >
                   Gallery

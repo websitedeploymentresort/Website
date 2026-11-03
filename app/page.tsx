@@ -97,7 +97,7 @@ export default function HomePage() {
                 Book Your Escape
               </Link>
               <Link
-                href="/rooms"
+                href="/luxury-rooms-in-chikmagalur"
                 className="border border-porcelain/40 text-porcelain px-8 py-4 text-xs uppercase tracking-[0.25em] hover:border-vanilla hover:text-vanilla transition-colors duration-300"
               >
                 Explore Rooms

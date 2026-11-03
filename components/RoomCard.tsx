@@ -6,7 +6,7 @@ import { Maximize, Users, ArrowRight } from "lucide-react";
 export default function RoomCard({ room }: { room: Room }) {
   return (
     <Link
-  href={`/rooms/${room.id}`}
+  href={`/luxury-rooms-in-chikmagalur/${room.id}`}
   className="group block h-[560px] bg-porcelain border border-coffee/70 overflow-hidden flex flex-col transition-all duration-500 hover:shadow-xl hover:shadow-coffee/10"
 >
   <div className="relative h-[340px] overflow-hidden flex-shrink-0">

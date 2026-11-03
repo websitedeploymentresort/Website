@@ -11,7 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1.0,
     },
     {
-      url: `${BASE_URL}/rooms`,
+      url: `${BASE_URL}/luxury-rooms-in-chikmagalur`,
       changeFrequency: "weekly",
       priority: 0.9,
     },
@@ -21,12 +21,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
-      url: `${BASE_URL}/gallery`,
+      url: `${BASE_URL}/chikmagalur-resort-gallery`,
       changeFrequency: "monthly",
       priority: 0.7,
     },
     {
-      url: `${BASE_URL}/about`,
+      url: `${BASE_URL}/about-la-damai-resorts`,
       changeFrequency: "monthly",
       priority: 0.8,
     },
@@ -38,7 +38,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   const roomPages: MetadataRoute.Sitemap = rooms.map((room) => ({
-    url: `${BASE_URL}/rooms/${room.id}`,
+    url: `${BASE_URL}/luxury-rooms-in-chikmagalur/${room.id}`,
     changeFrequency: "monthly",
     priority: 0.8,
   }));

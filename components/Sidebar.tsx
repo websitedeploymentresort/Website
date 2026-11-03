@@ -6,9 +6,9 @@ import { Menu, X, Instagram, Facebook, Twitter as TwitterIcon } from "lucide-rea
 import Image from "next/image";
 const navLinks = [
   { href: "/", label: "Home" },
-  { href: "/about", label: "About Us" },
-  { href: "/rooms", label: "Rooms & Suites" },
-  { href: "/gallery", label: "Gallery" },
+  { href: "/about-la-damai-resorts", label: "About Us" },
+  { href: "/luxury-rooms-in-chikmagalur", label: "Rooms & Suites" },
+  { href: "/chikmagalur-resort-gallery", label: "Gallery" },
   { href: "/contact", label: "Contact Us" },
   { href: "https://bookingengine.stayflexi.com/?hotel_id=38902", label: "Book Now" },
 ];

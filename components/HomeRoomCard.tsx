@@ -21,7 +21,7 @@ export default function HomeRoomCard({ room }: { room: Room }) {
         </h3>
 
         <Link
-          href={`/rooms/${room.id}`}
+          href={`/luxury-rooms-in-chikmagalur/${room.id}`}
           className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.25em] text-coffee border-b border-coffee/30 pb-1 hover:border-palm hover:text-palm transition-all duration-300"
         >
           View Room

@@ -224,12 +224,12 @@ export async function generateMetadata({
     title: `${room.name} | La Damai Resorts`,
     description: `${room.name} at La Damai Resorts in Chikmagalur offers ${room.size.toLowerCase()} with ${highlightSummary} for a luxurious stay in the Western Ghats.`,
     alternates: {
-      canonical: `/rooms/${id}`,
+      canonical: `/luxury-rooms-in-chikmagalur/${id}`,
     },
     openGraph: {
       title: `${room.name} | La Damai Resorts`,
       description: `${room.name} at La Damai Resorts in Chikmagalur offers a premium stay with scenic views and luxury amenities.`,
-      url: `https://www.damairesorts.com/rooms/${id}`,
+      url: `https://www.damairesorts.com/luxury-rooms-in-chikmagalur/${id}`,
       type: "article",
     },
     twitter: {
@@ -442,7 +442,7 @@ const images = getRoomImages(id);
 
       </main>
       <Link
-  href={`/rooms/${nextRoom.id}`}
+  href={`/luxury-rooms-in-chikmagalur/${nextRoom.id}`}
   aria-label={`View ${nextRoom.name}`}
   className="fixed right-5 top-1/2 -translate-y-1/2 z-50 group"
 >

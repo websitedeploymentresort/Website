@@ -9,7 +9,7 @@ export const metadata = {
   description:
     "View luxury villas, dining spaces, and scenic landscapes at La Damai Resorts in Chikmagalur through our resort gallery.",
   alternates: {
-    canonical: "/gallery",
+    canonical: "/chikmagalur-resort-gallery",
   },
 };
 
